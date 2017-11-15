@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<link rel="stylesheet" type="text/css" href="pagestyle.css">
+
+
+<head>
+	
+	<title>MTM Team Management</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favico.ico" type="image/x-icon">
+</head>
+
+
+<body>
+
+	<div>
+		<img src="BannerImage4.png" alt="BANNER IMAGE" width=100% height=280px>
+	</div>
+
+
+	<div id="topnav">
+	<a href="#jointeam" onclick="load_jointeam()" >Join Team</a>
+	<a href="#myteams" onclick="load_myteam()">My Teams</a>
+	<a href="#manageteams" onclick="load_manageteam()" >Manage Teams</a>
+	</div>
+
+	<div id="content"> <!-- This is where the content gets loaded--></div>
+	<script type="text/javascript" language="JavaScript">
+		function load_jointeam() {
+			document.getElementById("content").innerHTML='<object type="text/html" data="jointeam.html" ></object>';
+		}
+
+		function load_manageteam() {
+			document.getElementById("content").innerHTML='<object type="text/html" data="manageteams.html" ></object>';
+		 }
+
+		 function load_myteam() {
+			document.getElementById("content").innerHTML='<object type="text/html" data="myteam.html" ></object>';
+		 }
+	</script>
+
+
+
+</body>
+</html>

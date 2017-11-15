@@ -1,0 +1,64 @@
+
+
+body {
+	background-color: lightgray;
+}
+
+h1 {
+	font-family: courier;
+	color: black;
+	font-size: 50px;
+	text-align: center;
+	
+}
+
+div {
+	position: relative;
+}
+
+
+li{
+	display: inline;
+}
+
+#topnav {
+    background-color: #0a2a5e;
+	list-style: none;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+    text-align: center;
+}
+    li {
+      float: none;
+      display: inline-block;
+    }
+
+
+
+
+#topnav a {
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	width: 150px; /* fixed width */
+    font-size: 20px;
+}
+
+#red {
+	color:blue;
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+#topnav a.active {
+    background-color: #0000fd;
+    color: white;
+}
