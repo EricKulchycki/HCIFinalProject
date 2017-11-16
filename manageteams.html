@@ -5,17 +5,128 @@
 
 
 <head>
-	
+
 	<title>MTM Team Management</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+	font-family: Arial;
+	
+}
+
+
+input[type=text] { /* style for text boxes */
+    width: 38%;
+    padding: 12px 20px;
+    margin: 8px 31%;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] { /* style for submit box */
+    width: 10%;
+    background-color: dodgerBlue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	text-align: center;
+
+}
+
+
+input[type=submit]:hover {
+    background-color: DarkBlue;
+}
+input[type=text]:hover {
+    background-color: lightgray;
+}
+
+.formsection {
+	font-size: 12px;
+	position: relative;
+	height: 50%;
+	width: 100%;
+	left: 0;
+	top: 20%;
+
+}
+
+
+.createteamside {
+	position: relative;
+	display: inline-block;
+	height:110%;
+	width:30%;
+	border-style: solid;
+	border-color: blue;
+	margin: 10px;
+	min-height: 250px;
+	
+}
+
+.createteamheader {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	height: 10%;
+
+}
+
+.teamsrunside {
+	position: relative;
+	display: inline-block;
+	height:100%;
+	width:50%;
+	border-style: solid;
+	border-color: blue;
+	margin: 10px;
+	left: 15%;
+	min-height: 250px;
+}
+
+
+</style>
+</head>
 </head>
 
 
 <body>
 
-	<p>This is content for the management page</p>
+	<!--<div>
+		<img src="BannerImage2.png" alt="BANNER IMAGE" width=100% height=280px>
+	</div>
 
 
+	<div id="topnav">
+	<a href="#jointeams">Join Team</a>
+	<a href="#myteams">My Teams</a>
+	<a href="#manageteams">Manage Teams</a>
+	</div>
+-->
+	<div>
+		<! This is where our pages get loaded>
+	</div>
+
+	<div class="createteamside">
+		<div class="createteamheader">
+		<p>Create A Team</p>
+		</div>
+	</div>
+	
+	<div class="teamsrunside">
+	<p>Manage your Teams</p>
+	
+	</div>
+	
 
 </body>
 </html>

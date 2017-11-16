@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+	font-family: Arial;
+	
+}
+
+.backg { /* background image */
+    
+    background-image: url("back1.jpeg");
+
+    height: 100%; 
+    background-position: relative;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+	z-index: -3;
+}
+
+.middle{ /* for the middle block */
+position: absolute;
+
+width: 50%;
+height: 100%;
+
+right: 25%;
+top: 0;
+
+text-align: center;
+
+background: rgba(185, 192, 204, 0.65);
+border-style: solid;
+border-color: gray;
+
+border-top: none;
+border-bottom: none;
+}
+
+
+.goback{
+	display: inline-block;
+	width: 10%;
+    background-color: dodgerBlue;
+    color: white;
+    padding: 15px 20px;
+    margin: 8px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	text-align: center;
+
+}
+
+.submit{
+
+	display: inline-block;
+	width: 10%;
+    background-color: dodgerBlue;
+    color: white;
+    padding: 15px 20px;
+    margin: 8px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+
+}
+
+input[type=text] { /* style for text boxes */
+    width: 38%;
+    padding: 12px 20px;
+    margin: 8px 31%;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] { /* style for submit box */
+    width: 10%;
+    background-color: dodgerBlue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	text-align: center;
+
+}
+
+.goback:hover {
+    background-color: DarkBlue;
+}
+
+.submit:hover {
+    background-color: DarkBlue;
+}
+
+input[type=submit]:hover {
+    background-color: DarkBlue;
+}
+input[type=text]:hover {
+    background-color: lightgray;
+}
+
+.formsection {
+	font-size: 12px;
+	position: relative;
+	height: 50%;
+	width: 100%;
+	left: 0;
+	top: 20%;
+
+}
+
+
+</style>
+</head>
+<body>
+
+<title>Sign up for MTM!</title>
+
+<div class="backg"><!-- background picture -->
+
+<div class="middle"><!-- div for the middle section -->
+
+<div class="formsection"><!-- div for the placement of the form -->
+<p style="font-size: 20px"> <b>Join My Team Manager today.</b> </p>
+<form action="#jointeam"> <!-- GO TO MY PLAYER PAGE -->
+    <input type="text" placeholder="User Name">
+	<br><br>
+    <input type="text" placeholder="Password"> <!-- CHANE IT SO IT HAS TWO ACTIONS IT CAN DO -->
+	<input type="text" placeholder="Confirm Password">
+	<br><br>
+	<input type="text" placeholder="Email">
+	<br>
+	<input type="text" placeholder="Phone Number">
+		<br><br><br>
+	<a class="goback" href="frontpage.html">Go Back</a>
+	<a class="submit" href="#jointeam">Submit</a>
+	<!--<input type="submit" value="Submit"> -->
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
