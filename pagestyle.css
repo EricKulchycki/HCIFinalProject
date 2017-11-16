@@ -22,7 +22,7 @@ li{
 }
 
 #topnav {
-    background-color: #0a2a5e;
+    background-color: #333333;
 	list-style: none;
 	margin: 0 auto;
 	position: relative;
@@ -73,6 +73,6 @@ object {
 
 /* Add a color to the active/current link */
 #topnav a.active {
-    background-color: #0000fd;
+    background-color: #5a5a5f;
     color: white;
 }
