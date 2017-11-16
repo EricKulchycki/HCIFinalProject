@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+	font-family: Arial;
+}
+.backg {
+    
+    background-image: url("back1.jpeg");
+
+    height: 100%; 
+    background-position: relative;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+	position: relative;
+	margin: auto;
+	top: 50px;
+	padding: 10px;
+	width: 60%;
+	min-width: 600px;
+	height: 10%;
+	text-align: center;
+	font-size: 22px;
+}
+
+.logo {
+	position: relative;
+	margin: 5%, 40%;
+	height: 15%;
+	width: 14%;
+	left: 43%;
+	top: 30px;
+	text-align: center;
+
+}
+
+a:link {
+color: dodgerBlue;
+
+}
+
+a:hover {
+color: darkblue;
+}
+
+
+
+div.login {
+position: fixed;
+left: 40%;
+top: 50%;
+width: 20%;
+min-width: 200px;
+text-align: center;
+
+background: rgba(240, 240, 240, 0.95);
+border: 2px solid black;
+border-radius: 5px;
+
+
+}
+
+div.login_actual{
+position: relative;
+
+width: 100%;
+left: 0%;
+top: 25%;
+text-align: center;
+
+background: rgba(240, 240, 240, 0.95);
+border: 2px solid black;
+border-right-style:none;
+border-left-style:none;
+}
+
+div.login_last{
+position: relative;
+
+width: 100%;
+left: 0%;
+top: 25%;
+text-align: center;
+
+background: rgba(240, 240, 240, 0.95);
+}
+
+input[type=text], select {
+    width: 65%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 75%;
+    background-color: dodgerBlue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: DarkBlue;
+}
+
+
+</style>
+</head>
+<body>
+
+<title>Welcome to MTM!</title>
+
+<div class="backg">
+
+
+<img class="logo" src="MTM.png" alt="LOGO">
+
+<h1>
+Welcome to My Team Manager, we are a new and upcoming platform 
+meant to help you manage and create teams!
+</h1>
+
+<div class="login">
+<p><b>Login or Sign Up</b></p>
+<br>
+<div class="login_actual">
+<p>Login</p>
+<form action="#myplayer"> <!-- GO TO MY PLAYER PAGE -->
+    <input type="text" placeholder="User Name">
+
+    <input type="text" placeholder="Password">
+	
+	<input type="submit" value="Submit">
+</form>
+</div>
+
+<div class="login_last" 
+<br>
+<p>Don't have an account? <b><a href="signup.html">Sign up</a></p><!-- GO TO MY sign up PAGE -->
+</div>
+
+</div>
+</div>
+</body>
+</html>
