@@ -180,8 +180,14 @@ background-color: grey;
 
 }
 
+
+
+
+
+
 .teamonetitle{
-	top: 5%;
+	position: relative;
+	top: 0;
 	width: 60%;
 	height: 10%;
 	border-style: solid;
@@ -191,10 +197,9 @@ background-color: grey;
 
 }
 
-
-
 .scheduling {
-	top: 8%;
+	position: relative;
+	top: 0;
 	width: 60%;
 	height: 75%;
 	border-style: solid;
@@ -203,6 +208,37 @@ background-color: grey;
 
 }
 
+.pendinggameinvites {
+	position: relative;
+	top: 0;
+	width: 30%;
+	height: 75%;
+	left: 5%;
+	border-style: solid;
+	border-color: black;
+	display: inline-block;
+	bottom: 25%;
+	text-align: center;
+
+}
+
+#pendinggameinvitesone {
+	position: relative;
+	height: 80%;
+	width: 95%;
+	margin: 5% 2%;
+	display: inline-block;
+	border-color: cyan;
+	border-style: solid;
+
+}
+
+.pendinginviteentry {
+	position: relative;
+	width: 100%;
+	height: 10%;
+	font: 100%;
+}
 
 
 </style>
@@ -218,7 +254,7 @@ background-color: grey;
 	<div class="headerformanage">
 		<div class="headerformanage_left">
 		Your Teams
-		</div>
+		</div> <!-- end of header left -->
 		<div class="headerformanage_right">
 			<button type="button" onclick='document.getElementById("demo").display =none'>
 			<<
@@ -229,24 +265,24 @@ background-color: grey;
 			<button type="button" onclick='document.getElementById("demo").display =none'>
 			>>
 			</button>
-		</div> 
+		</div> <!-- end of header right -->
 	</div>	<!-- end of header -->
-	<div class="teamonetitle">
-		Good Squad
-	</div>
+	
+	<p class="teamonetitle">
+		Goon Squad
+	</p> <!-- end of team on title -->
+	
 	<div class="scheduling">
-	Schedule Game<br><br>
-	Select A Team To Play<br>
-	Date<br>
-	Send Invite
-	<br>
-	------------------ <br>
-	Schedule Other<br><br>
-	Title Of Event
-	Data
-	Schedule	
-	</div>
-</div>
+	</div> <!-- end of scheudling box-->
+	<<div class="pendinggameinvites">
+	Pending Game invites
+		<div id="pendinggameinvitesone">
+			<p class="pendinginviteentry">
+			</p>
+		</div><!-- end of pending game invites one 
+		
+	</div><!-- end of pending game invite -->
+</div><!-- end of entire box -->
 	
 
 </body>
