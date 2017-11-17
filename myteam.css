@@ -4,6 +4,7 @@ div.scrollmenu {
     white-space: nowrap;
     width: 70%;
     display: inline-block;
+    padding-top: 5px;
 }
 
 div.scrollmenu a {
@@ -17,6 +18,7 @@ div.scrollmenu a {
 
 div.scrollmenu a:hover {
     background-color: #777;
+    transform: scale(1.02);
 }
 
 .displaycal {
@@ -70,8 +72,8 @@ body {font-family: Verdana, sans-serif;}
 .month {
     padding: 70px 25px;
     width: 94%;
-    background: #919d9e;
     text-align: center;
+    background-color: #777;
 }
 
 /* Month list */
@@ -144,5 +146,10 @@ body {font-family: Verdana, sans-serif;}
 
 .teamrole {
     width: 50%;    
+    text-align: right;
+}
+
+.roster {
+    width: 50%;
     text-align: right;
 }

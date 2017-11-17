@@ -59,7 +59,8 @@ object {
     padding: 14px 16px;
     text-decoration: none;
 	width: 150px; /* fixed width */
-    font-size: 20px;
+	font-size: 20px;
+	
 }
 
 #red {
@@ -69,7 +70,8 @@ object {
 /* Change the color of links on hover */
 #topnav a:hover {
     background-color: #777;
-    color: white;
+	color: white;
+	transform: scale(1.03);
 }
 
 /* Add a color to the active/current link */
