@@ -52,6 +52,15 @@ div.scrollmenu a:hover {
     overflow: auto;
 }
 
+.infotitle {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px; 
+    overflow: auto;
+}
+
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
@@ -122,6 +131,6 @@ body {font-family: Verdana, sans-serif;}
 /* Highlight the "current" day */
 .days li .active {
     padding: 5px;
-    background: #11b6db;
+    background: #0fa8ce;
     color: white
 }
