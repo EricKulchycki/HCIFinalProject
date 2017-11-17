@@ -63,9 +63,40 @@ object {
 	
 }
 
-#red {
-	color:blue;
+#join {
+	display: inline-block;
+    color: #ffffff;
+	background-color: #333333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	width: 150px; /* fixed width */
+	font-size: 20px;
 }
+
+#myteam {
+	display: inline-block;
+    color: #ffffff;
+	background-color: #333333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	width: 150px; /* fixed width */
+	font-size: 20px;
+}
+
+#manageteam {
+	display: inline-block;
+    color: #ffffff;
+	background-color: #333333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	width: 150px; /* fixed width */
+	font-size: 20px;
+}
+
+
 
 /* Change the color of links on hover */
 #topnav a:hover {
