@@ -4,6 +4,7 @@ div.scrollmenu {
     white-space: nowrap;
     width: 70%;
     display: inline-block;
+    padding-top: 5px;
 }
 
 div.scrollmenu a {
@@ -17,7 +18,7 @@ div.scrollmenu a {
 
 div.scrollmenu a:hover {
     background-color: #777;
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .displaycal {
@@ -70,7 +71,7 @@ body {font-family: Verdana, sans-serif;}
 /* Month header */
 .month {
     padding: 70px 25px;
-    width: 95%;
+    width: 94%;
     text-align: center;
     background-color: #777;
 }
