@@ -27,7 +27,8 @@ div.scrollmenu a:hover {
     border-color: #333333;
     left: 10%;
 	margin: 10px;
-	min-height: 250px;
+    min-height: 250px;
+    border-radius: 5px;
 }
 
 
@@ -39,11 +40,21 @@ div.scrollmenu a:hover {
 	border-style: solid;
 	border-color: #333333;
 	margin: 10px;
-	min-height: 250px;
+    min-height: 250px;
+    border-radius: 5px;
 }
 
 
 .titlecal {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px; 
+    overflow: auto;
+}
+
+.infotitle {
     display: inline-block;
     width: 25%;
     text-align: center;
@@ -58,7 +69,7 @@ body {font-family: Verdana, sans-serif;}
 /* Month header */
 .month {
     padding: 70px 25px;
-    width: 95.2%;
+    width: 94%;
     background: #919d9e;
     text-align: center;
 }
@@ -122,6 +133,16 @@ body {font-family: Verdana, sans-serif;}
 /* Highlight the "current" day */
 .days li .active {
     padding: 5px;
-    background: #11b6db;
+    background: #0fa8ce;
     color: white
+}
+
+.numplayers {
+    width: 50%;
+    text-align: right;
+}
+
+.teamrole {
+    width: 50%;    
+    text-align: right;
 }
