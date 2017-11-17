@@ -94,6 +94,83 @@ input[type=text]:hover {
 }
 
 
+.headerformanage {
+	position: relative;
+	display: inline-block;
+	height: 5%;
+	width: 100%;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: solid;
+	border-color: rgb(150,150,150);
+	text-align: left;
+
+}
+
+
+.headerformanage_right {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 36%;
+	border-style: none;
+	border-color: green;
+
+}
+
+.headerformanage_left {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 58%;
+	border-style: none;
+	border-color: green;
+	font-size:18;
+	text-align: center;
+
+}
+
+button {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 20%;
+	border-style: none;
+	border-color: lightblue;
+	font-size: 18px;
+}
+
+button:hover {
+background-color: grey;
+}
+
+.headerleftwords {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 90%;
+	border-style: none;
+	border-color: blue;
+	font-size: 100%;
+	text-align: center;
+	top: 0px;
+}
+
+.headerrightmiddle {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 45%;
+	border-style: none;
+	border-color: lightgrey;
+	font-size: 18px;
+	text-align: center;
+}
+
+
+
+
 </style>
 </head>
 </head>
@@ -101,31 +178,26 @@ input[type=text]:hover {
 
 <body>
 
-	<!--<div>
-		<img src="BannerImage2.png" alt="BANNER IMAGE" width=100% height=280px>
-	</div>
 
-
-	<div id="topnav">
-	<a href="#jointeams">Join Team</a>
-	<a href="#myteams">My Teams</a>
-	<a href="#manageteams">Manage Teams</a>
-	</div>
--->
-	<div>
-		<! This is where our pages get loaded>
-	</div>
-
-	<div class="createteamside">
-		<div class="createteamheader">
-		<p>Create A Team</p>
+	
+<div class="teamsrunside">
+	<div class="headerformanage">
+		<div class="headerformanage_left">
+		Your Teams
 		</div>
-	</div>
-	
-	<div class="teamsrunside">
-	<p>Manage your Teams</p>
-	
-	</div>
+		<div class="headerformanage_right">
+			<button type="button" onclick='document.getElementById("demo").display =none'>
+			<<
+			</button>
+			<div class="headerrightmiddle">
+			Goon Squad
+			</div>
+			<button type="button" onclick='document.getElementById("demo").display =none'>
+			>>
+			</button>
+		</div> <!-- end of right -->
+	</div>	
+</div>
 	
 
 </body>
