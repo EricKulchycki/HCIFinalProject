@@ -83,3 +83,7 @@ object {
 	height: 200px;
 	text-align: center;
 } 
+
+#image {
+	margin-top: 2.5px; 
+}
