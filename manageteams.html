@@ -88,6 +88,7 @@ input[type=text]:hover {
 	display: inline-block;
 	height:90%;
 	width:50%;
+	min-width: 675px;
 	border-style: solid;
 	border-color: #333333;
 	margin: 10px;
@@ -116,6 +117,8 @@ input[type=text]:hover {
 	border-bottom: solid;
 	border-color: rgb(150,150,150);
 	text-align: left;
+	overflow: hidden;
+	font-size: 90% <!--1.1vw; -->
 
 }
 
@@ -137,7 +140,6 @@ input[type=text]:hover {
 	width: 58%;
 	border-style: none;
 	border-color: green;
-	font-size:18;
 	text-align: center;
 
 }
@@ -149,7 +151,6 @@ button {
 	width: 20%;
 	border-style: none;
 	border-color: lightblue;
-	font-size: 18px;
 }
 
 button:hover {
@@ -175,10 +176,32 @@ background-color: grey;
 	width: 45%;
 	border-style: none;
 	border-color: lightgrey;
-	font-size: 18px;
 	text-align: center;
+
 }
 
+.teamonetitle{
+	top: 5%;
+	width: 60%;
+	height: 10%;
+	border-style: solid;
+	border-color: black;
+	display: inline-block;
+	text-align: center;
+
+}
+
+
+
+.scheduling {
+	top: 8%;
+	width: 60%;
+	height: 75%;
+	border-style: solid;
+	border-color: black;
+	display: inline-block;
+
+}
 
 
 
@@ -206,8 +229,23 @@ background-color: grey;
 			<button type="button" onclick='document.getElementById("demo").display =none'>
 			>>
 			</button>
-		</div> <!-- end of right -->
-	</div>	
+		</div> 
+	</div>	<!-- end of header -->
+	<div class="teamonetitle">
+		Good Squad
+	</div>
+	<div class="scheduling">
+	Schedule Game<br><br>
+	Select A Team To Play<br>
+	Date<br>
+	Send Invite
+	<br>
+	------------------ <br>
+	Schedule Other<br><br>
+	Title Of Event
+	Data
+	Schedule	
+	</div>
 </div>
 	
 
