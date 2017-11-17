@@ -17,6 +17,7 @@ div.scrollmenu a {
 
 div.scrollmenu a:hover {
     background-color: #777;
+    transform: scale(1.03);
 }
 
 .displaycal {
@@ -69,9 +70,9 @@ body {font-family: Verdana, sans-serif;}
 /* Month header */
 .month {
     padding: 70px 25px;
-    width: 94%;
-    background: #919d9e;
+    width: 95%;
     text-align: center;
+    background-color: #777;
 }
 
 /* Month list */
@@ -144,5 +145,10 @@ body {font-family: Verdana, sans-serif;}
 
 .teamrole {
     width: 50%;    
+    text-align: right;
+}
+
+.roster {
+    width: 50%;
     text-align: right;
 }
