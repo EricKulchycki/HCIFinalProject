@@ -60,39 +60,16 @@ input[type=text]:hover {
 
 }
 
-
-.createteamside {
-	position: relative;
-	display: inline-block;
-	height:90%;
-	width:30%;
-	border-style: solid;
-	border-color: #333333;
-	margin: 10px;
-	min-height: 250px;
-	
-}
-
-.createteamheader {
-	font-weight: bold;
-	font-size: 20px;
-	text-align: left;
-	padding-left: 25px;
-	width: 100%;
-	height: 10%;
-
-}
-
 .teamsrunside {
 	position: relative;
 	display: inline-block;
-	height:90%;
-	width:50%;
+	height:95%;
+	width:60%;
 	min-width: 675px;
 	border-style: solid;
 	border-color: #333333;
 	margin: 10px;
-	left: 15%;
+	left: 18%;
 	min-height: 250px;
 }
 
@@ -109,7 +86,7 @@ input[type=text]:hover {
 .headerformanage {
 	position: relative;
 	display: inline-block;
-	height: 5%;
+	height: 10%;
 	width: 100%;
 	border-top: none;
 	border-right: none;
@@ -118,7 +95,7 @@ input[type=text]:hover {
 	border-color: rgb(150,150,150);
 	text-align: left;
 	overflow: hidden;
-	font-size: 90% <!--1.1vw; -->
+	
 
 }
 
@@ -147,10 +124,11 @@ input[type=text]:hover {
 button {
 	position: relative;
 	display: inline-block;
-	height: 100%;
+	height: 60%;
 	width: 20%;
 	border-style: none;
 	border-color: lightblue;
+	text-align: center;
 }
 
 button:hover {
@@ -188,30 +166,32 @@ background-color: grey;
 .teamonetitle{
 	position: relative;
 	top: 0;
-	width: 60%;
+	width: 90%;
 	height: 10%;
 	border-style: solid;
 	border-color: black;
-	display: inline-block;
+	display: block;
 	text-align: center;
-
+	font-size: 25px;
+	margin: auto;
 }
 
 .scheduling {
 	position: relative;
 	top: 0;
-	width: 60%;
+	width: 90%;
 	height: 75%;
 	border-style: solid;
 	border-color: black;
-	display: inline-block;
+	display: block;
+	margin: auto;
 
 }
 
 .pendinggameinvites {
 	position: relative;
 	top: 0;
-	width: 30%;
+	width: 20%;
 	height: 75%;
 	left: 5%;
 	border-style: solid;
@@ -222,7 +202,7 @@ background-color: grey;
 
 }
 
-#pendinggameinvitesone {
+.pendinggameinvitesone {
 	position: relative;
 	height: 80%;
 	width: 95%;
@@ -240,6 +220,62 @@ background-color: grey;
 	font: 100%;
 }
 
+.leftinside {
+	position: relative;
+	top: 0;
+	width: 70%;
+	height: 100%;
+	border-style: solid;
+	border-color: black;
+	display: inline-block;
+	text-align: center;
+}
+
+.rightinside {
+	position: relative;
+	top: 0;
+	width: 28%;
+	height: 100%;
+	border-style: solid;
+	border-color: black;
+	display: inline-block;
+	text-align: center;
+
+}
+
+.titleright {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 10%;
+	border-style: solid;
+	border-color: black;
+	display: inline-block;
+	text-align: center;
+}
+
+.game {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 50%;
+	border-style: solid;
+	border-color: black;
+	display: block;
+	text-align: center;
+}
+
+.other {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 50%;
+	border-style: solid;
+	border-color: black;
+	display: block;
+	text-align: center;
+}
+
 
 </style>
 </head>
@@ -253,14 +289,14 @@ background-color: grey;
 <div class="teamsrunside">
 	<div class="headerformanage">
 		<div class="headerformanage_left">
-		Your Teams
+		<p>Your Teams</p>
 		</div> <!-- end of header left -->
 		<div class="headerformanage_right">
 			<button type="button" onclick='document.getElementById("demo").display =none'>
 			<<
 			</button>
 			<div class="headerrightmiddle">
-			Goon Squad
+			<p>Goon Squad</p>
 			</div>
 			<button type="button" onclick='document.getElementById("demo").display =none'>
 			>>
@@ -268,19 +304,30 @@ background-color: grey;
 		</div> <!-- end of header right -->
 	</div>	<!-- end of header -->
 	
-	<p class="teamonetitle">
-		Goon Squad
-	</p> <!-- end of team on title -->
+	<div class="teamonetitle">
+		<p>Goon Squad</p>
+	</div> <!-- end of team on title -->
 	
 	<div class="scheduling">
-	</div> <!-- end of scheudling box-->
-	<<div class="pendinggameinvites">
-	Pending Game invites
-		<div id="pendinggameinvitesone">
-			<p class="pendinginviteentry">
-			</p>
-		</div><!-- end of pending game invites one 
+	<div class="leftinside">
+		<div class ="game">
 		
+		</div>
+		
+		<div class ="other">
+		
+		</div>
+	</div>
+	
+	<div class="rightinside">
+
+	</div>
+	</div> <!-- end of scheudling box-->
+	<!--<div class="pendinggameinvites">
+	
+		<div class="pendinggameinvitesone">
+
+		</div><!-- end of pending game invites one
 	</div><!-- end of pending game invite -->
 </div><!-- end of entire box -->
 	
