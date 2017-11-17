@@ -126,7 +126,6 @@ button {
 	height: 60%;
 	width: 20%;
 	border-style: none;
-	border-color: lightblue;
 	text-align: center;
 }
 
@@ -146,7 +145,7 @@ background-color: grey;
 	top: 0px;
 }
 
-.headerrightmiddle {
+#headerrightmiddle {
 	position: relative;
 	display: inline-block;
 	height: 100%;
@@ -162,12 +161,12 @@ background-color: grey;
 
 
 
-.teamonetitle{
+#teamonetitle{
 	position: relative;
 	top: 0;
 	width: 90%;
 	height: 10%;
-	border-style: solid;
+	border-style: none;
 	border-color: black;
 	display: block;
 	text-align: center;
@@ -180,7 +179,7 @@ background-color: grey;
 	top: 0;
 	width: 90%;
 	height: 75%;
-	border-style: solid;
+	border-style: none;
 	border-color: black;
 	display: block;
 	margin: auto;
@@ -193,7 +192,7 @@ background-color: grey;
 	width: 20%;
 	height: 75%;
 	left: 5%;
-	border-style: solid;
+	border-style: none;
 	border-color: black;
 	display: inline-block;
 	bottom: 25%;
@@ -224,7 +223,7 @@ background-color: grey;
 	top: 0;
 	width: 70%;
 	height: 100%;
-	border-style: solid;
+	border-style: none;
 	border-color: black;
 	display: inline-block;
 	text-align: center;
@@ -235,6 +234,7 @@ background-color: grey;
 	top: 0;
 	width: 26%;
 	height: 100%;
+	margin: 0 0 0 15px;
 	border-style: solid;
 	border-color: black;
 	display: inline-block;
@@ -258,7 +258,7 @@ background-color: grey;
 	top: 0;
 	width: 100%;
 	height: 50%;
-	border-style: solid;
+	border-style: none;
 	border-color: black;
 	display: block;
 	text-align: center;
@@ -269,8 +269,11 @@ background-color: grey;
 	top: 50%;
 	width: 100%;
 	height: 50%;
-	border-style: solid;
-	border-color: black;
+	border-top: solid;
+	border-right: none;
+	border-left: none;
+	border-bottom: none;
+	border-color: grey;
 	display: block;
 	text-align: center;
 }
@@ -284,6 +287,17 @@ background-color: grey;
 
 <body>
 
+<script>
+function changeNamesOne() {
+   		document.getElementById('headerrightmiddle').innerHTML = "Sun Devils";
+		document.getElementById('teamonetitle').innerHTML = "Sun Devils";
+}
+
+function changeNamesTwo() {
+   		document.getElementById('headerrightmiddle').innerHTML = "Goon Squad";
+		document.getElementById('teamonetitle').innerHTML = "Goon Squad";
+}
+</script>
 
 	
 <div class="teamsrunside">
@@ -292,20 +306,20 @@ background-color: grey;
 		<p>Your Teams</p>
 		</div> <!-- end of header left -->
 		<div class="headerformanage_right">
-			<button type="button" onclick='document.getElementById("demo").display =none'>
+			<button type="button" onclick='changeNamesTwo()'>
 			<<
 			</button>
-			<div class="headerrightmiddle">
+			<div id="headerrightmiddle">
 			<p>Goon Squad</p>
 			</div>
-			<button type="button" onclick='document.getElementById("demo").display =none'>
+			<button type="button" onclick='changeNamesOne()'>
 			>>
 			</button>
 		</div> <!-- end of header right -->
 	</div>	<!-- end of header -->
 	
-	<div class="teamonetitle">
-		<p>Goon Squad</p>
+	<div id="teamonetitle">
+		Goon Squad
 	</div> <!-- end of team on title -->
 	
 	<div class="scheduling">
