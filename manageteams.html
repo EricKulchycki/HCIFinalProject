@@ -43,7 +43,7 @@ input[type=submit] { /* style for submit box */
 
 
 input[type=submit]:hover {
-    background-color: DarkBlue;
+    background-color: #333333;
 }
 input[type=text]:hover {
     background-color: lightgray;
@@ -52,10 +52,11 @@ input[type=text]:hover {
 .formsection {
 	font-size: 12px;
 	position: relative;
-	height: 50%;
+	height: 60%;
 	width: 100%;
 	left: 0;
 	top: 20%;
+
 
 }
 
@@ -63,10 +64,10 @@ input[type=text]:hover {
 .createteamside {
 	position: relative;
 	display: inline-block;
-	height:110%;
+	height:90%;
 	width:30%;
 	border-style: solid;
-	border-color: blue;
+	border-color: #333333;
 	margin: 10px;
 	min-height: 250px;
 	
@@ -75,7 +76,8 @@ input[type=text]:hover {
 .createteamheader {
 	font-weight: bold;
 	font-size: 20px;
-	text-align: center;
+	text-align: left;
+	padding-left: 25px;
 	width: 100%;
 	height: 10%;
 
@@ -84,13 +86,22 @@ input[type=text]:hover {
 .teamsrunside {
 	position: relative;
 	display: inline-block;
-	height:100%;
+	height:90%;
 	width:50%;
 	border-style: solid;
-	border-color: blue;
+	border-color: #333333;
 	margin: 10px;
 	left: 15%;
 	min-height: 250px;
+}
+
+.teamsrunsideheader {
+	text-align: left;
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 25px;
+	width: 30%;
+	height: 10%;
 }
 
 
@@ -178,6 +189,7 @@ background-color: grey;
 
 <body>
 
+<<<<<<< HEAD
 
 	
 <div class="teamsrunside">
@@ -198,6 +210,18 @@ background-color: grey;
 		</div> <!-- end of right -->
 	</div>	
 </div>
+=======
+	<div class="createteamside">
+		<div class="createteamheader">
+			<p>Create A Team</p>
+		</div>
+	</div>
+	<div class="teamsrunside">
+		<div class="teamsrunsideheader">	
+			<p>Manage Your Teams</p>
+		</div>
+	</div>
+>>>>>>> 3458af181c9d0cf9823bf3eca0f3da3df74e2a01
 	
 
 </body>

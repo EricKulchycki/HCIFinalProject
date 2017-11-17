@@ -22,8 +22,9 @@ li{
 }
 
 #topnav {
-    background-color: #0a2a5e;
+    background-color: #333333;
 	list-style: none;
+	position: fixed;
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
@@ -67,12 +68,18 @@ object {
 
 /* Change the color of links on hover */
 #topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #777;
+    color: white;
 }
 
 /* Add a color to the active/current link */
-#topnav a.active {
-    background-color: #0000fd;
+#topnav a:active {
+    background-color: #5a5a5f;
     color: white;
 }
+
+#banner{
+	background-image: url('basketball-court-header.jpg');
+	height: 200px;
+	text-align: center;
+} 
