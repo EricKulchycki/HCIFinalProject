@@ -18,9 +18,10 @@ body, html {
 
 
 input[type=text] { /* style for text boxes */
-    width: 38%;
-    padding: 12px 20px;
-    margin: 8px 31%;
+	position: relative;
+	top: 50%;
+    width: 30%;
+	margin: 1%;
     display: inline-block;
     border: 1px solid black;
     border-radius: 4px;
@@ -28,14 +29,27 @@ input[type=text] { /* style for text boxes */
 }
 
 input[type=submit] { /* style for submit box */
-    width: 10%;
-    background-color: dodgerBlue;
+	position: fixed;
+	display: inline-block;
+	
+    width: 5%;
+	min-width: 75px;
+	height: 75px;
+	bottom: 44%;
+	left: 24%;
+	
+    background-color: limegreen;
     color: white;
+	
     padding: 14px 20px;
     margin: 8px 25px;
-    border: none;
-    border-radius: 8px;
+	
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+	
     cursor: pointer;
+	
 	text-align: center;
 
 }
@@ -158,9 +172,6 @@ background-color: grey;
 
 
 
-
-
-
 #teamonetitle{
 	position: relative;
 	top: 0;
@@ -184,38 +195,6 @@ background-color: grey;
 	display: block;
 	margin: auto;
 
-}
-
-.pendinggameinvites {
-	position: relative;
-	top: 0;
-	width: 20%;
-	height: 75%;
-	left: 5%;
-	border-style: none;
-	border-color: black;
-	display: inline-block;
-	bottom: 25%;
-	text-align: center;
-
-}
-
-.pendinggameinvitesone {
-	position: relative;
-	height: 80%;
-	width: 95%;
-	margin: 5% 2%;
-	display: inline-block;
-	border-color: cyan;
-	border-style: solid;
-
-}
-
-.pendinginviteentry {
-	position: relative;
-	width: 100%;
-	height: 10%;
-	font: 100%;
 }
 
 .leftinside {
@@ -278,6 +257,17 @@ background-color: grey;
 	text-align: center;
 }
 
+.row {
+	position: relative;
+	width: 25%;
+	height: 15%;
+	border-style: none;
+	border-color: black;
+	display: inline-block;
+	text-align: right;
+	margin: 0 0;
+}
+
 
 
 </style>
@@ -325,11 +315,34 @@ function changeNamesTwo() {
 	<div class="scheduling">
 	<div class="leftinside">
 		<div class ="game">
-		hey
+		
+			<form action="headerframework.html"> <!-- GO TO MY PLAYER PAGE -->
+				<p class="row" style="display:block"><b>Schedule a Game</b></p>
+				<p class="row">Team Name</p><input type="text" placeholder="Opponent's Name">
+				<br>
+				<p class="row">Date</p><input type="text" placeholder="Date of Game">
+				<br>
+				<p class="row">Time</p><input type="text" placeholder="Time of Game">
+				<br>
+				<p class="row">Location</p><input type="text" placeholder="Location">
+				
+				<input type="submit" value="Enter">
+			</form>
 		</div>
 		
 		<div class ="other">
-		hey
+					<form action="headerframework.html"> <!-- GO TO MY PLAYER PAGE -->
+				<p class="row" style="display:block"><b>Schedule Other</b></p>
+				<p class="row">Title of Event</p><input type="text" placeholder="Event Name">
+				<br>
+				<p class="row">Date</p><input type="text" placeholder="Date of Game">
+				<br>
+				<p class="row">Time</p><input type="text" placeholder="Time of Game">
+				<br>
+				<p class="row">Location</p><input type="text" placeholder="Location">
+				
+				<input style="bottom: 5%" type="submit" value="Enter">
+			</form>
 		</div>
 	</div>
 	
@@ -337,12 +350,6 @@ function changeNamesTwo() {
 hey<br><br> hey again!!
 	</div>
 	</div> <!-- end of scheudling box-->
-	<!--<div class="pendinggameinvites">
-	
-		<div class="pendinggameinvitesone">
-
-		</div><!-- end of pending game invites one
-	</div><!-- end of pending game invite -->
 </div><!-- end of entire box -->
 	
 
