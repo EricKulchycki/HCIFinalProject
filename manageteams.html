@@ -216,6 +216,8 @@ background-color: grey;
 	margin: 0 0 0 15px;
 	border-style: solid;
 	border-color: black;
+	border-radius: 5px;
+    box-sizing: border-box;
 	display: inline-block;
 	text-align: center;
 
@@ -287,6 +289,19 @@ function changeNamesTwo() {
    		document.getElementById('headerrightmiddle').innerHTML = "Goon Squad";
 		document.getElementById('teamonetitle').innerHTML = "Goon Squad";
 }
+
+function changeInvitesOne() {
+
+}
+
+function changeInvitesTwo() {
+
+}
+
+function scheduleGame() {
+
+
+}
 </script>
 
 	
@@ -297,13 +312,13 @@ function changeNamesTwo() {
 		</div> <!-- end of header left -->
 		<div class="headerformanage_right">
 			<button type="button" onclick='changeNamesTwo()'>
-			<<
+			<b>Prev</b>
 			</button>
 			<div id="headerrightmiddle">
 			<p>Goon Squad</p>
 			</div>
 			<button type="button" onclick='changeNamesOne()'>
-			>>
+			<b>Next</b>
 			</button>
 		</div> <!-- end of header right -->
 	</div>	<!-- end of header -->
