@@ -142,14 +142,54 @@ body {font-family: Verdana, sans-serif;}
 .numplayers {
     width: 50%;
     text-align: right;
+    overflow: hidden;
+    display: inline-block;
 }
 
 .teamrole {
     width: 50%;    
     text-align: right;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .roster {
     width: 50%;
     text-align: right;
+    display: inline-block;
+    overflow: hidden;
+    border-style: solid;
+}
+
+.teamroledis {
+    width: 30%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.numplayersdis {
+    width: 30%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.teamname {
+    width: 50%;    
+    text-align: right;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.teamnamedis {
+    width: 30%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.rosterlist {
+    width: 30%;
+    overflow: scroll;
+    display: inline-block;
+    border-style: solid;
+    max-height: 50px;
 }
