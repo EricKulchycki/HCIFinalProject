@@ -6,29 +6,98 @@
 <body>
 
 
-<div class="searchbox" id="entireBox">
+<div id="searchbox">
   <p style="text-align: center; font-family: arial;">Team Name :
-  <input type="text" name="firstname">  
+  <input type="text" name="teamname">  
   <button class="searchbutton">Search</button><br>
-  <ul>
-    <li>
-      <a href="#">Filter &#9663;</a>
-      <ul class="dropdown">
-        <!-- Fix this-->
-        <li><a href="#">Country <span style="float: right">&#9657 </span></a></li>
-        <li id="CountryHover">
-          <a href="#" id="CountryHover">Country <span style="float: right">&#9657 </span></a></li>
-        <li><a href="#">City <span style="float: right">&#9657 </span></a></li>
-        <li><a href="#">Sport Type <span style="float: right">&#9657 </span></a></li>
-        <li><a href="#">Number of Players <span style="float: right">&#9657 </span></a></li>
-        <li><a href="#">Coach's Name <span style="float: right">&#9657 </span></a></li>
-      </ul>
-    </li>
-  </ul>
+  <div class="advancedOption">
+    <span> Advanced </span><br>
+    <div class="CountryFilter">
+      <span> Country :</span>
+      <span style="float: right">
+        <select name="countries" align="right">
+          <option value="Canada">Canada</option>
+          <option value="Canada">USA</option>
+          <option value="Canada">Others</option>
+        </select>
+      </span>
+    </div>
+    <div class="CityFilter">
+      <span> City :</span>
+      <span style="float: right">
+        <select name="cities">
+          <option value="Canada">Charlottetown</option>
+          <option value="Canada">Edmonton</option>
+          <option value="Canada">Fredericton</option>
+          <option value="Canada">Halifax</option>
+          <option value="Canada">Iqaluit</option>
+          <option value="Canada">Ottawa</option>
+          <option value="Canada">Quebec</option>
+          <option value="Canada">Regina</option>
+          <option value="Canada">St. John's</option>
+          <option value="Canada">Toronto</option>
+          <option value="Canada">Vancouver</option>
+          <option value="Canada">Victoria</option>
+          <option value="Canada">Whitehorse</option>
+          <option value="Canada">Winnipeg</option>
+          <option value="Canada">Yellowknife</option>
+        </select>
+      </span>
+    </div><br>
+    <div class="SportFilter">
+      <span> Sport Type :</span>
+      <span style="float: right">
+        <select name="sports">
+          <option value="Canada">Badminton<option>
+          <option value="Canada">Basketball<option>
+          <option value="Canada">Disc Golf<option>
+          <option value="Canada">Dodgeball<option>
+          <option value="Canada">Golf<option>
+          <option value="Canada">Hockey<option>
+          <option value="Canada">Soccer<option>
+          <option value="Canada">Volleyball<option>
+          <option value="Canada">Water Polo<option>
+        </select>
+      </span>
+    </div>
+    <div class="NumPlayerFilter">
+      <span> Number of Players :</span>
+      <span style="float: right">
+       <input type="text" name="numplayers">  
+      </span>
+    </div>
+    <div class="CoachFilter">
+      <span> Coach's Name :</span>
+      <span style="float: right">
+        <input type="text" name="coachname">  
+      </span>
+    </div>
+  </div>
 </div>
 
-<div class="resultbox">
-  <div class="resultwindow"></div>
+<div id="resultbox">
+  <div class="resultwindow">
+    <ul>
+    <li>
+      <a href="#">
+        <span> Kicking and Screaming <span style="float: right"> Kevin Hoang </span></span><br>
+        <span> Soccer <span style= "float: right"> Num. Players: 15 </span></span><b>
+      </a>
+    </li>
+    <li>
+      <a href="#"></a>
+    </li>
+    <li>
+      <a href="#"></a>
+    </li>
+    <li>
+      <a href="#"></a>
+    </li>
+        <li>
+      <a href="#"></a>
+    </li>
+  </ul>
+  </div>
 </div>
 
 

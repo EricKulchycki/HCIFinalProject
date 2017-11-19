@@ -1,39 +1,33 @@
-
 /* list */
 ul
 {
   padding: 0;
   list-style: none;
-  background: #0073e6;
+  background: #aaaaaa;
 }
 
 ul li
 {
+  width: 100%;
   display: inline-block;
   position: relative;
-  line-height: 21px;
   text-align: left;
 }
 
 ul li a
 {
-  border: 1px solid #308fff;
+  height: 100px;
+  border: 1px solid #aaaaaa;
   display: block;
-  padding: 8px 20px;
-  color: #cce6ff;
-  background: #1a8cff;
+  color: #888888;
+  background: #ffffff;
   text-decoration: none;
-}
-
-ul li:first-child
-{
-  position: absolute;
-  left: 20px;
+  padding: 10px 20px;
 }
 
 ul li a:hover{
-  color: #fff;
-  background: #0080ff;
+  color: #666666;
+  background: #dddddd;
 }
 
 ul li ul.dropdown
@@ -74,7 +68,132 @@ ul li ul li div.countryListBlock
   left: 0;
 }
 
-ul li ul li.CountryHover:hover
+/* DROPDOWN */
+
+
+.advancedOption {
+  width: 90%;
+  height: 20px;
+  background-color: #0073e6;
+  
+  vertical-align: text-top;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  
+  position: relative;
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  border-top: 1px solid #CCC;
+  color: #000;
+}
+.advancedOption:hover {
+  color: #aaaaaa;
+}
+
+.advancedOption::before {
+  font-family: Consolas, monaco, monospace;
+  font-weight: bold;
+  font-size: 15px;
+  content: "+";
+  vertical-align: text-top;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+}
+
+.advancedOption:focus
+{
+  display: block;
+}
+.advancedOption:active
+{
+  width: 96%;
+  height: 250px;
+  background-color:#0073e6;
+  color: #ffffff;
+  
+  position: relative;
+  overflow: hidden;
+  transition: height 0.5s;
+  
+  vertical-align: text-top;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 2px #0073e6;
+  
+  z-index: 1;
+}
+
+section {
+  padding: 0 20px;
+}
+
+div div div
+{
+  width: 100%;
+  height: 10%;
+  
+  position: relative;
+  display: none;
+  
+  overflow: hidden;
+
+  z-index: 9999;
+  text-align: left;
+}
+div div:active div
+{
+  display: block;
+}
+
+.CountryFilter
+{
+
+}
+.CountryFilter ~ .advancedOption:active
+{
+  display: block;
+}
+
+.CityFilter
+{
+
+}
+
+.CityFilter ~ .advancedOption:active
+{
+  display: block;
+}
+
+.SportFilter
+{
+  border-top: 1px solid #0066cc;
+}
+.SportFilter ~ .advancedOption:active
+{
+  display: block;
+}
+
+.NumPlayerFilter
+{
+
+}
+.NumPlayerFilter ~ .advancedOption:active
+{
+  display: block;
+}
+
+.CoachFilter
+{
+
+}
+.CoachFilter ~ .advancedOption:active
 {
   display: block;
 }
@@ -113,10 +232,10 @@ ul li ul li.CountryHover:hover
 }
 
 
-.searchbox
+#searchbox
 {
   width: 30%;
-  height: 125px;
+  height: 100px;
   background-color:#0073e6;
   color: #cce6ff;
   
@@ -131,7 +250,7 @@ ul li ul li.CountryHover:hover
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  border-radius: 25px;
+  border-radius: 5px;
   box-shadow: 0px 0px 2px 2px #0073e6;
   padding-top:20px;
   float:left;
@@ -139,12 +258,12 @@ ul li ul li.CountryHover:hover
   z-index: 99;
   
   animation-name: searchAnimation;
-  animation-duration: 60s;
+  animation-duration: 30s;
 }
 
-.resultbox
+#resultbox
 {
-  width: 10;
+  width: 10px;
   height: 10px;
   background-color:#0073e6;
   color: #cce6ff;
@@ -160,21 +279,51 @@ ul li ul li.CountryHover:hover
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  border-radius: 25px;
+  border-radius: 5px;
   box-shadow: 0px 0px 2px 2px #0073e6;
-  padding-top:20px;
   float:left;
   
   animation-name: resultAnimation;
-  animation-duration: 60s;
+  animation-duration: 30s;
   
-  z-index: 1
+  z-index: 1;
+  
+  overflow: hidden;
+}
+
+.resultwindow
+{
+  width: 95%;
+  height: 95%;
+  background-color:#dddddd;
+  color: #cce6ff;
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  
+  overflow: auto;
+  
+  z-index: 10;
+}
+
+.soccer
+{
+   background: url('soccer.png') no-repeat;
+   width: 16px;
+   height: 16px;
+   border: none;
+
+   display:inline-block;
 }
 
 @keyframes searchAnimation
 {
   10% {}
-  12% {left:0}
+  12% {left:0;}
   14% {left: -500px;}
   100% {left: -500px;}
 }
@@ -182,16 +331,8 @@ ul li ul li.CountryHover:hover
 @keyframes resultAnimation
 {
   0% {left: 0; width: 10px; height: 10px;}
-  12% {left: 0}
+  12% {left: 0;}
   14% {left: 500px; width: 10px; height: 10px;}
   15% {width: 500px; height: 500px;}
   100% {left: 500px; width: 500px; height: 500px}
-}
-
-.resultwindow
-{
-  length: 90px;
-  width: 90px;
-  background-color:#aaaaaa;
-  color: #cce6ff;
 }
