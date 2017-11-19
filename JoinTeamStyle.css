@@ -1,4 +1,24 @@
 /* list */
+
+input[type=text] {
+    width: 40%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 0px 10px 0px 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+span
+{
+  white-space: pre;
+}
+
 ul
 {
   padding: 0;
@@ -72,9 +92,9 @@ ul li ul li div.countryListBlock
 
 
 .advancedOption {
-  width: 90%;
+  width: 50%;
   height: 20px;
-  background-color: #0073e6;
+  background-color: #888888;
   
   vertical-align: text-top;
   left: 0;
@@ -85,13 +105,17 @@ ul li ul li div.countryListBlock
   
   position: relative;
   display: block;
-  padding: 0.5em;
   text-align: center;
-  border-top: 1px solid #CCC;
-  color: #000;
+  border-top: 1px solid #aaaaaa;
+  color: #ffffff;
+  
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 2px #666666;
+  
+  transition: 0.5s;
 }
 .advancedOption:hover {
-  color: #aaaaaa;
+  color: #cccccc;
 }
 
 .advancedOption::before {
@@ -103,7 +127,7 @@ ul li ul li div.countryListBlock
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 3px;
+  margin-right: 1px;
   background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
 }
 
@@ -113,9 +137,9 @@ ul li ul li div.countryListBlock
 }
 .advancedOption:active
 {
-  width: 96%;
-  height: 250px;
-  background-color:#0073e6;
+  width: 100%;
+  height: 300px;
+  background-color:#777777;
   color: #ffffff;
   
   position: relative;
@@ -125,7 +149,7 @@ ul li ul li div.countryListBlock
   vertical-align: text-top;
   display: inline-block;
   border-radius: 5px;
-  box-shadow: 0px 0px 2px 2px #0073e6;
+  box-shadow: 0px 0px 0px 2px #666666;
   
   z-index: 1;
 }
@@ -134,10 +158,15 @@ section {
   padding: 0 20px;
 }
 
+#center
+{
+  margin: 0 auto;
+}
+
 div div div
 {
   width: 100%;
-  height: 10%;
+  height: 17%;
   
   position: relative;
   display: none;
@@ -146,10 +175,21 @@ div div div
 
   z-index: 9999;
   text-align: left;
+  
+  border: 1px solid #777777;
+  border-bottom: 1px solid #666666;
+  border-style: dashed;
+  
+  padding-left: 20px;
+}
+
+div div div:last-child
+{
+  border: none;
 }
 div div:active div
 {
-  display: block;
+  display: inline-block;
 }
 
 .CountryFilter
@@ -173,7 +213,7 @@ div div:active div
 
 .SportFilter
 {
-  border-top: 1px solid #0066cc;
+ 
 }
 .SportFilter ~ .advancedOption:active
 {
@@ -203,7 +243,7 @@ div div:active div
   height: 25px;
   width: 75px;
   
-  background-color: #0059b3;
+  background-color: #666666;
   border: none;
   color: white;
   
@@ -215,20 +255,17 @@ div div:active div
   font-size: 15px;
   margin: 2px 2px;
   cursor: pointer;
-  box-shadow: 0px 0px 2px 2px #0059b3;
+  box-shadow: 0px 0px 2px 2px #444444;
 }
 
 .searchbutton:hover{
-    background-color: #0066cc;
+    background-color: #777777;
 }
 
-.searchbutton:active .searchbutton:focus
+.searchbutton:active
 {
-  width: 50px;
-  height: 50px;
-  background: #0073e6;
-  right: -5px;
-  transition: 1s;
+
+  background: #444444;
 }
 
 
@@ -236,8 +273,8 @@ div div:active div
 {
   width: 30%;
   height: 100px;
-  background-color:#0073e6;
-  color: #cce6ff;
+  background-color:#888888;
+  color: #ffffff;
   
   position: absolute;
   top: 0;
@@ -251,7 +288,7 @@ div div:active div
   justify-content: center;
   text-align: left;
   border-radius: 5px;
-  box-shadow: 0px 0px 2px 2px #0073e6;
+  box-shadow: 0px 0px 0px 2px #666666;
   padding-top:20px;
   float:left;
   
@@ -265,7 +302,7 @@ div div:active div
 {
   width: 10px;
   height: 10px;
-  background-color:#0073e6;
+  background-color:#888888;
   color: #cce6ff;
   
   position: absolute;
@@ -280,7 +317,7 @@ div div:active div
   justify-content: center;
   text-align: left;
   border-radius: 5px;
-  box-shadow: 0px 0px 2px 2px #0073e6;
+  box-shadow: 0px 0px 0px 3px #666666;
   float:left;
   
   animation-name: resultAnimation;
@@ -306,6 +343,9 @@ div div:active div
   margin: auto;
   
   overflow: auto;
+  
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 3px #666666;
   
   z-index: 10;
 }
