@@ -24,7 +24,6 @@ li{
 #topnav {
     background-color: #333333;
 	list-style: none;
-	position: fixed;
 	margin: 0 auto;
 	position: relative;
 	width: 100%;

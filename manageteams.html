@@ -8,6 +8,7 @@
 	<title>MTM Team Management</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body, html {
     height: 100%;
@@ -18,9 +19,10 @@ body, html {
 
 
 input[type=text] { /* style for text boxes */
-    width: 38%;
-    padding: 12px 20px;
-    margin: 8px 31%;
+	position: relative;
+	top: 50%;
+    width: 30%;
+	margin: 1%;
     display: inline-block;
     border: 1px solid black;
     border-radius: 4px;
@@ -28,14 +30,27 @@ input[type=text] { /* style for text boxes */
 }
 
 input[type=submit] { /* style for submit box */
-    width: 10%;
-    background-color: dodgerBlue;
+	position: fixed;
+	display: inline-block;
+	
+    width: 5%;
+	min-width: 75px;
+	height: 75px;
+	bottom: 44%;
+	left: 24%;
+	
+    background-color: limegreen;
     color: white;
+	
     padding: 14px 20px;
     margin: 8px 25px;
-    border: none;
-    border-radius: 8px;
+	
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+	
     cursor: pointer;
+	
 	text-align: center;
 
 }
@@ -102,31 +117,54 @@ input[type=text]:hover {
 .headerformanage_right {
 	position: relative;
 	display: inline-block;
-	height: 100%;
+	height: 90%;
 	width: 36%;
 	border-style: none;
 	border-color: green;
+	
 
 }
 
 .headerformanage_left {
 	position: relative;
 	display: inline-block;
-	height: 100%;
-	width: 58%;
+	height: 90%;
+	width: 50%;
+	margin:0 1% 0 0;
 	border-style: none;
 	border-color: green;
-	text-align: center;
+	text-align: right;
 
 }
 
-button {
+.createateam {
+	position: absolute;
+	display: inline-block;
+	height: 60%;
+	width: 10%;
+	top: 28%;
+	margin:0 0 0 1%;
+	background-color: lightgray;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 5px;
+	
+	font-size: 10px;
+	color: black;
+	background-color: rgb(12, 245, 249);
+	text-align: center;
+	overflow: hidden;
+}
+
+.headerbuttons {
 	position: relative;
 	display: inline-block;
 	height: 60%;
 	width: 20%;
 	border-style: none;
 	text-align: center;
+	border-radius: 5px;
 }
 
 button:hover {
@@ -158,9 +196,6 @@ background-color: grey;
 
 
 
-
-
-
 #teamonetitle{
 	position: relative;
 	top: 0;
@@ -186,38 +221,6 @@ background-color: grey;
 
 }
 
-.pendinggameinvites {
-	position: relative;
-	top: 0;
-	width: 20%;
-	height: 75%;
-	left: 5%;
-	border-style: none;
-	border-color: black;
-	display: inline-block;
-	bottom: 25%;
-	text-align: center;
-
-}
-
-.pendinggameinvitesone {
-	position: relative;
-	height: 80%;
-	width: 95%;
-	margin: 5% 2%;
-	display: inline-block;
-	border-color: cyan;
-	border-style: solid;
-
-}
-
-.pendinginviteentry {
-	position: relative;
-	width: 100%;
-	height: 10%;
-	font: 100%;
-}
-
 .leftinside {
 	position: relative;
 	top: 0;
@@ -237,6 +240,8 @@ background-color: grey;
 	margin: 0 0 0 15px;
 	border-style: solid;
 	border-color: black;
+	border-radius: 5px;
+    box-sizing: border-box;
 	display: inline-block;
 	text-align: center;
 
@@ -278,6 +283,91 @@ background-color: grey;
 	text-align: center;
 }
 
+.row {
+	position: relative;
+	width: 25%;
+	height: 15%;
+	border-style: none;
+	border-color: black;
+	display: inline-block;
+	text-align: right;
+	margin: 0 0;
+}
+
+.rowforform {
+	position: relative;
+	width: 45%;
+	height: 15%;
+	border-style: none;
+	border-color: gray;
+	display: inline-block;
+	text-align: right;
+	margin: 0 0;
+}
+
+#createteampopup {
+	position: fixed;
+	height: 99%;
+	width: 100%;
+	border-style: none;
+	border-color: cyan;
+	z-index: 10;
+	background: rgba(10,10,10, .9);
+	display: none;
+
+}
+
+.createteamform {
+	position: relative;
+	height: 80%;
+	width: 20%;
+	left: 40%;
+	top: 10%;
+	border-style: solid;
+	border-color: black;
+	z-index: 11;
+	background: lightgrey;
+
+}
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:rgb(181, 1, 13);
+}
+#close:hover {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    color:#fff;
+}
+
+.createsubmit {
+	position: relative;
+	display: inline-block;
+	
+	height: 30px;
+	width: 25%;
+	margin: 0 40%;
+	
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 5px;
+	
+	color: black;
+	background-color: rgb(12, 245, 249);
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.createsubmit:hover {
+    background-color: #333333;
+}
+}
 
 
 </style>
@@ -297,25 +387,75 @@ function changeNamesTwo() {
    		document.getElementById('headerrightmiddle').innerHTML = "Goon Squad";
 		document.getElementById('teamonetitle').innerHTML = "Goon Squad";
 }
+
+function changeInvitesOne() {
+
+}
+
+function changeInvitesTwo() {
+
+}
+
+function openCreate() {
+
+
+}
+
+function closeCreate() {
+			var element = document.getElementById('createteampopup');
+			
+}
 </script>
 
-	
+<div id="createteampopup">
+	<div class="createteamform">
+				<form action="#nothing"> 
+					<p class="rowforform" style="margin: 0 0 10% 0 ;text-align: center; width: 100%; border-bottom:solid; border-bottom-color: black">
+					<b>Create A Team</b> 
+					<button id="close" type="button" onClick="document.getElementById('createteampopup').style.display='none'">
+						<i class="fa fa-close" style="font-size:16px;color:white"></i>
+					</button>
+				</p>
+				
+				<p class="rowforform">Team Name</p><input style="width: 40%" type="text" placeholder="Team name">
+				<br><br>
+				<p class="rowforform">Sport</p><input type="text" placeholder="Name of Sport">
+				<br><br>
+				<p class="rowforform">Country</p><input type="text" placeholder="Team's Country">
+				<br>
+				<p class="rowforform">Province</p><input type="text" placeholder="Team's Province">
+				<br>
+				<p class="rowforform">City</p><input type="text" placeholder="Team's City">
+				<br>
+				<p class="rowforform">Neighbourhood</p><input type="text" placeholder="Neighbourhood">
+				<br><br>
+				<p class="rowforform">Location</p><input type="text" placeholder="Location">
+				<br><br>
+				<input class="createsubmit" type="createsubmit" value="Create Team">
+				
+			</form>
+	</div>
+</div>
+
 <div class="teamsrunside">
 	<div class="headerformanage">
 		<div class="headerformanage_left">
-		<p>Your Teams</p>
+		<p>Current Team</p>
 		</div> <!-- end of header left -->
 		<div class="headerformanage_right">
-			<button type="button" onclick='changeNamesTwo()'>
-			<<
+			<button class="headerbuttons" type="button" onclick='changeNamesTwo()'>
+			<b>Prev</b>
 			</button>
 			<div id="headerrightmiddle">
 			<p>Goon Squad</p>
 			</div>
-			<button type="button" onclick='changeNamesOne()'>
-			>>
+			<button class="headerbuttons" type="button" onclick='changeNamesOne()'>
+			<b>Next</b>
 			</button>
 		</div> <!-- end of header right -->
+		<button class="createateam" type="button" onclick="document.getElementById('createteampopup').style.display='block'">
+		<b>Create a Team</b>
+		</button>
 	</div>	<!-- end of header -->
 	
 	<div id="teamonetitle">
@@ -325,24 +465,41 @@ function changeNamesTwo() {
 	<div class="scheduling">
 	<div class="leftinside">
 		<div class ="game">
-		hey
+		
+			<form action="#nothing"> <!-- GO TO MY PLAYER PAGE -->
+				<p class="row" style="display:block"><b>Schedule a Game</b></p>
+				<p class="row">Team Name</p><input type="text" placeholder="Opponent's Name">
+				<br>
+				<p class="row">Date</p><input type="text" placeholder="Date of Game">
+				<br>
+				<p class="row">Time</p><input type="text" placeholder="Time of Game">
+				<br>
+				<p class="row">Location</p><input type="text" placeholder="Location">
+				
+				<input type="submit" value="Enter">
+			</form>
 		</div>
 		
 		<div class ="other">
-		hey
+					<form action="#nothing"> <!-- GO TO MY PLAYER PAGE -->
+				<p class="row" style="display:block"><b>Schedule Other</b></p>
+				<p class="row">Title of Event</p><input type="text" placeholder="Event Name">
+				<br>
+				<p class="row">Date</p><input type="text" placeholder="Date of Game">
+				<br>
+				<p class="row">Time</p><input type="text" placeholder="Time of Game">
+				<br>
+				<p class="row">Location</p><input type="text" placeholder="Location">
+				
+				<input style="bottom: 5%" type="submit" value="Enter">
+			</form>
 		</div>
 	</div>
 	
 	<div class="rightinside">
-hey<br><br> hey again!!
+		
 	</div>
 	</div> <!-- end of scheudling box-->
-	<!--<div class="pendinggameinvites">
-	
-		<div class="pendinggameinvitesone">
-
-		</div><!-- end of pending game invites one
-	</div><!-- end of pending game invite -->
 </div><!-- end of entire box -->
 	
 
