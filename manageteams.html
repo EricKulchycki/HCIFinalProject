@@ -8,6 +8,7 @@
 	<title>MTM Team Management</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body, html {
     height: 100%;
@@ -116,31 +117,54 @@ input[type=text]:hover {
 .headerformanage_right {
 	position: relative;
 	display: inline-block;
-	height: 100%;
+	height: 90%;
 	width: 36%;
 	border-style: none;
 	border-color: green;
+	
 
 }
 
 .headerformanage_left {
 	position: relative;
 	display: inline-block;
-	height: 100%;
-	width: 58%;
+	height: 90%;
+	width: 50%;
+	margin:0 1% 0 0;
 	border-style: none;
 	border-color: green;
-	text-align: center;
+	text-align: right;
 
 }
 
-button {
+.createateam {
+	position: absolute;
+	display: inline-block;
+	height: 60%;
+	width: 10%;
+	top: 28%;
+	margin:0 0 0 1%;
+	background-color: lightgray;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 5px;
+	
+	font-size: 10px;
+	color: black;
+	background-color: rgb(12, 245, 249);
+	text-align: center;
+	overflow: hidden;
+}
+
+.headerbuttons {
 	position: relative;
 	display: inline-block;
 	height: 60%;
 	width: 20%;
 	border-style: none;
 	text-align: center;
+	border-radius: 5px;
 }
 
 button:hover {
@@ -270,6 +294,80 @@ background-color: grey;
 	margin: 0 0;
 }
 
+.rowforform {
+	position: relative;
+	width: 45%;
+	height: 15%;
+	border-style: none;
+	border-color: gray;
+	display: inline-block;
+	text-align: right;
+	margin: 0 0;
+}
+
+#createteampopup {
+	position: fixed;
+	height: 99%;
+	width: 100%;
+	border-style: none;
+	border-color: cyan;
+	z-index: 10;
+	background: rgba(10,10,10, .9);
+	display: none;
+
+}
+
+.createteamform {
+	position: relative;
+	height: 80%;
+	width: 20%;
+	left: 40%;
+	top: 10%;
+	border-style: solid;
+	border-color: black;
+	z-index: 11;
+	background: lightgrey;
+
+}
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:rgb(181, 1, 13);
+}
+#close:hover {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    color:#fff;
+}
+
+.createsubmit {
+	position: relative;
+	display: inline-block;
+	
+	height: 30px;
+	width: 25%;
+	margin: 0 40%;
+	
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 5px;
+	
+	color: black;
+	background-color: rgb(12, 245, 249);
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.createsubmit:hover {
+    background-color: #333333;
+}
+}
 
 
 </style>
@@ -298,29 +396,66 @@ function changeInvitesTwo() {
 
 }
 
-function scheduleGame() {
+function openCreate() {
 
 
 }
+
+function closeCreate() {
+			var element = document.getElementById('createteampopup');
+			
+}
 </script>
 
-	
+<div id="createteampopup">
+	<div class="createteamform">
+				<form action="#nothing"> 
+					<p class="rowforform" style="margin: 0 0 10% 0 ;text-align: center; width: 100%; border-bottom:solid; border-bottom-color: black">
+					<b>Create A Team</b> 
+					<button id="close" type="button" onClick="document.getElementById('createteampopup').style.display='none'">
+						<i class="fa fa-close" style="font-size:16px;color:white"></i>
+					</button>
+				</p>
+				
+				<p class="rowforform">Team Name</p><input style="width: 40%" type="text" placeholder="Team name">
+				<br><br>
+				<p class="rowforform">Sport</p><input type="text" placeholder="Name of Sport">
+				<br><br>
+				<p class="rowforform">Country</p><input type="text" placeholder="Team's Country">
+				<br>
+				<p class="rowforform">Province</p><input type="text" placeholder="Team's Province">
+				<br>
+				<p class="rowforform">City</p><input type="text" placeholder="Team's City">
+				<br>
+				<p class="rowforform">Neighbourhood</p><input type="text" placeholder="Neighbourhood">
+				<br><br>
+				<p class="rowforform">Location</p><input type="text" placeholder="Location">
+				<br><br>
+				<input class="createsubmit" type="createsubmit" value="Create Team">
+				
+			</form>
+	</div>
+</div>
+
 <div class="teamsrunside">
 	<div class="headerformanage">
 		<div class="headerformanage_left">
-		<p>Your Teams</p>
+		<p>Current Team</p>
 		</div> <!-- end of header left -->
 		<div class="headerformanage_right">
-			<button type="button" onclick='changeNamesTwo()'>
+			<button class="headerbuttons" type="button" onclick='changeNamesTwo()'>
 			<b>Prev</b>
 			</button>
 			<div id="headerrightmiddle">
 			<p>Goon Squad</p>
 			</div>
-			<button type="button" onclick='changeNamesOne()'>
+			<button class="headerbuttons" type="button" onclick='changeNamesOne()'>
 			<b>Next</b>
 			</button>
 		</div> <!-- end of header right -->
+		<button class="createateam" type="button" onclick="document.getElementById('createteampopup').style.display='block'">
+		<b>Create a Team</b>
+		</button>
 	</div>	<!-- end of header -->
 	
 	<div id="teamonetitle">
@@ -331,7 +466,7 @@ function scheduleGame() {
 	<div class="leftinside">
 		<div class ="game">
 		
-			<form action="headerframework.html"> <!-- GO TO MY PLAYER PAGE -->
+			<form action="#nothing"> <!-- GO TO MY PLAYER PAGE -->
 				<p class="row" style="display:block"><b>Schedule a Game</b></p>
 				<p class="row">Team Name</p><input type="text" placeholder="Opponent's Name">
 				<br>
@@ -346,7 +481,7 @@ function scheduleGame() {
 		</div>
 		
 		<div class ="other">
-					<form action="headerframework.html"> <!-- GO TO MY PLAYER PAGE -->
+					<form action="#nothing"> <!-- GO TO MY PLAYER PAGE -->
 				<p class="row" style="display:block"><b>Schedule Other</b></p>
 				<p class="row">Title of Event</p><input type="text" placeholder="Event Name">
 				<br>
@@ -362,7 +497,7 @@ function scheduleGame() {
 	</div>
 	
 	<div class="rightinside">
-hey<br><br> hey again!!
+		
 	</div>
 	</div> <!-- end of scheudling box-->
 </div><!-- end of entire box -->
