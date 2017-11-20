@@ -22,12 +22,13 @@ div.scrollmenu a:hover {
 }
 
 .displaycal {
+	position: absolute;
 	display: inline-block;
-	height:90%;
+	height:85%;
 	width:55%;
+	left: 40%;
 	border-style: solid;
     border-color: #333333;
-    left: 10%;
 	margin: 10px;
     min-height: 250px;
     border-radius: 5px;
@@ -35,14 +36,14 @@ div.scrollmenu a:hover {
 
 
 .info {
-	position: relative;
-    float: left;
-	height:90%;
+	position: absolute;
+	height:85%;
 	width:30%;
 	border-style: solid;
 	border-color: #333333;
 	margin: 10px;
     min-height: 250px;
+	display: inline-block;
     border-radius: 5px;
 }
 
@@ -120,6 +121,7 @@ body {font-family: Verdana, sans-serif;}
     padding: 10px 0;
     background: #eee;
     margin: 0;
+	height: 41%;
 }
 
 .days li {
@@ -127,9 +129,10 @@ body {font-family: Verdana, sans-serif;}
     display: inline-block;
     width: 13.6%;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 3%;;
     font-size:12px;
     color:#777;
+
 }
 
 /* Highlight the "current" day */
@@ -154,11 +157,24 @@ body {font-family: Verdana, sans-serif;}
 }
 
 .roster {
+	position: absolute;
     width: 50%;
+	
     text-align: right;
     display: inline-block;
     overflow: hidden;
     border-style: solid;
+}
+
+.containerforroster {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50%;
+	
+	border-style: none;
+	border-color: black;
+	
 }
 
 .teamroledis {
@@ -187,9 +203,12 @@ body {font-family: Verdana, sans-serif;}
 }
 
 .rosterlist {
+	position: absolute;
+	left: 50%;
     width: 30%;
+	height: 100%;
     overflow: scroll;
     display: inline-block;
     border-style: solid;
-    max-height: 50px;
+    
 }
