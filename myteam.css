@@ -205,12 +205,39 @@ body {font-family: Verdana, sans-serif;}
 .rosterlist {
 	position: absolute;
 	left: 50%;
-    width: 20%;
-	height: 100%;
+    width: 25%;
+	height: 90%;
     overflow: scroll;
     display: inline-block;
     text-align: center;
     border-style: solid;
-    border-radius: 5px;
+    border-width: thin;
+    border-radius: 2px;
     
+}
+
+.wins {
+    width: 40%;    
+    text-align: right;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.numberwins {
+    width: 10%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.losses {
+    width: 10%;    
+    text-align: right;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.numberlosses {
+    width: 10%;
+    overflow: hidden;
+    display: inline-block;
 }
