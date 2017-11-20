@@ -11,7 +11,7 @@
   <input type="text" name="teamname" placeholder="Enter Team Name">  
   <button class="searchbutton">Search</button><br>
   <div class="advancedOption">
-    <input id="toggle" type="checkbox" checked> Advanced </span><br>
+    <input id="toggle" type="checkbox" checked> Advanced </input><br>
     <div class="CountryFilter" style="margin-left: 20px">
       <span id="space">Country :</span>
       <span id="space">
@@ -48,15 +48,15 @@
       <span id="space"> Sport Type :</span>
       <span id="space">
         <select name="sports">
-          <option value="Canada">Badminton<option>
-          <option value="Canada">Basketball<option>
-          <option value="Canada">Disc Golf<option>
-          <option value="Canada">Dodgeball<option>
-          <option value="Canada">Golf<option>
-          <option value="Canada">Hockey<option>
-          <option value="Canada">Soccer<option>
-          <option value="Canada">Volleyball<option>
-          <option value="Canada">Water Polo<option>
+          <option value="Canada">Badminton</option>
+          <option value="Canada">Basketball</option>
+          <option value="Canada">Disc Golf</option>
+          <option value="Canada">Dodgeball</option>
+          <option value="Canada">Golf</option>
+          <option value="Canada">Hockey</option>
+          <option value="Canada">Soccer</option>
+          <option value="Canada">Volleyball</option>
+          <option value="Canada">Water Polo</option>
         </select>
       </span>
     </div>
@@ -83,13 +83,14 @@
         <span> Goon Squad <span style="float: right"> Derek Dufault </span></span><br>
         <span> Football <span style= "float: right"> Num. Players: 32 </span></span><br>
         <span> W: 1 - L: 1<span style= "float: right"> Winnipeg, MB, CA</span></span><br><br>
-        <span id="accepting"> Accepting Players</span><div class="onteambutton">Already On Team</div><br>
+        <span id="accepting"> Accepting Players</span><div id="onteambutton">Already On Team</div><br>
     </li>
     <li>
         <span> Goon Squad <span style="float: right"> Kevin Hoang </span></span><br>
         <span> Soccer <span style= "float: right"> Num. Players: 15 </span></span><br>
         <span> W: 1024825 - L: 1<span style= "float: right"> Winnipeg, MB, CA</span></span><br><br>
-        <span id="accepting"> Accepting Players</span><button class="joinbutton">Join Team</button><br>
+        <span id="accepting"> Accepting Players</span><button id="cancelbutton" onClick="cancelRequest()">Cancel Request</button>
+        <button id="joinbutton" onClick="joinRequest()">Join Team</button><br>
     </li>
     <li>
         <span> Goon Squad <span style="float: right"> Eric Kulchycki </span></span><br>
@@ -107,13 +108,17 @@
         <span> Goon Squad Allegiance Team<span style="float: right"> Nicholas Josephson </span></span><br>
         <span> Volleyball <span style= "float: right"> Num. Players: 8 </span></span><br>
         <span> W: 0 - L: 1<span style= "float: right"> Toronto, ON, CA</span></span><br><br>
-        <span id="accepting"> Accepting Players</span><button class="joinbutton">Join Team</button><br>
+        <span id="accepting"> Accepting Players</span><button id="joinbutton">Join Team</button><br>
     </li>
   </ul>
   </div>
 </div>
 
-
+<script>
+function joinRequest() {
+    document.getElementByID("cancelbutton").style.color = "black";
+}
+</script>
 
 </body>
 </html>

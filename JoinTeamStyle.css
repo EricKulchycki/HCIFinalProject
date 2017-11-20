@@ -134,9 +134,9 @@
 }
 
 /* join button */
-.joinbutton {
+#joinbutton {
   height: 25px;
-  width: 100px;
+  width: 150px;
   
   background-color: #00cc00;
   border: none;
@@ -155,17 +155,49 @@
   float: right;
 }
 
-.joinbutton:hover{
+#joinbutton:hover{
     background-color: #00ff00;
 }
 
-.joinbutton:active
+#joinbutton:active
 {
   background: #009900;
 }
 
+/* cancel request button */
+#cancelbutton {
+  height: 25px;
+  width: 150px;
+  
+  background-color: #e60000;
+  border: none;
+  color: white;
+  
+  padding: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+  
+  display: block;
+  font-size: 15px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0px 0px 0px 3px #b30000;
+  float: right;
+}
+
+#cancelbutton:hover{
+    background-color: #ff1a1a;
+}
+
+#cancelbutton:active
+{
+  background: #b30000;
+}
+
+
 /* already on team - grey button */
-.onteambutton {
+#onteambutton {
   height: 25px;
   width: 150px;
   
