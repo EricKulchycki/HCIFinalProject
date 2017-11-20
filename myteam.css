@@ -163,7 +163,7 @@ body {font-family: Verdana, sans-serif;}
     text-align: right;
     display: inline-block;
     overflow: hidden;
-    border-style: solid;
+    
 }
 
 .containerforroster {
@@ -205,10 +205,12 @@ body {font-family: Verdana, sans-serif;}
 .rosterlist {
 	position: absolute;
 	left: 50%;
-    width: 30%;
+    width: 20%;
 	height: 100%;
     overflow: scroll;
     display: inline-block;
+    text-align: center;
     border-style: solid;
+    border-radius: 5px;
     
 }
