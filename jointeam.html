@@ -8,13 +8,13 @@
 
 <div id="searchbox">
   <p style="text-align: center; font-family: arial;">Team Name :
-  <input type="text" name="teamname">  
+  <input type="text" name="teamname" placeholder="Enter Team Name">  
   <button class="searchbutton">Search</button><br>
   <div class="advancedOption">
-    <span> Advanced </span><br>
-    <div class="CountryFilter" style="margin:0px auto">
-      <span>Country :</span>
-      <span id="center">
+    <input id="toggle" type="checkbox" checked> Advanced </span><br>
+    <div class="CountryFilter" style="margin-left: 20px">
+      <span id="space">Country :</span>
+      <span id="space">
         <select name="countries" align="right">
           <option value="Canada">Canada</option>
           <option value="Canada">USA</option>
@@ -23,8 +23,8 @@
       </span>
     </div>
     <div class="CityFilter">
-      <span> City :</span>
-      <span id="center">
+      <span id="space"> City :</span>
+      <span id="space">
         <select name="cities">
           <option value="Canada">Charlottetown</option>
           <option value="Canada">Edmonton</option>
@@ -45,8 +45,8 @@
       </span>
     </div><br>
     <div class="SportFilter">
-      <span> Sport Type :</span>
-      <span id="center">
+      <span id="space"> Sport Type :</span>
+      <span id="space">
         <select name="sports">
           <option value="Canada">Badminton<option>
           <option value="Canada">Basketball<option>
@@ -61,14 +61,14 @@
       </span>
     </div>
     <div class="NumPlayerFilter">
-      <span> Number of Players :</span>
-      <span id="center">
+      <span id="space"> Number of Players : </span>
+      <span id="space">
        <input type="text" name="numplayers">  
       </span>
     </div>
     <div class="CoachFilter">
-      <span> Coach's Name :</span>
-      <span id="center">
+      <span id="space"> Coach's Name :</span>
+      <span id="space">
         <input type="text" name="coachname">  
       </span>
     </div>
@@ -76,26 +76,38 @@
 </div>
 
 <div id="resultbox">
+  <div id="resultTitle">Results</div>
   <div class="resultwindow">
     <ul>
     <li>
-      <a href="#">
-        <span> Kicking and Screaming <span style="float: right"> Kevin Hoang </span></span><br>
-        <span> Soccer <span style= "float: right"> Num. Players: 15 </span></span><b>
-        <span> Soccer <span style= "float: right"> Num. Players: 15 </span></span><b>
-      </a>
+        <span> Goon Squad <span style="float: right"> Derek Dufault </span></span><br>
+        <span> Football <span style= "float: right"> Num. Players: 32 </span></span><br>
+        <span> W: 1 - L: 1<span style= "float: right"> Winnipeg, MB, CA</span></span><br><br>
+        <span id="accepting"> Accepting Players</span><div class="onteambutton">Already On Team</div><br>
     </li>
     <li>
-      <a href="#"></a>
+        <span> Goon Squad <span style="float: right"> Kevin Hoang </span></span><br>
+        <span> Soccer <span style= "float: right"> Num. Players: 15 </span></span><br>
+        <span> W: 1024825 - L: 1<span style= "float: right"> Winnipeg, MB, CA</span></span><br><br>
+        <span id="accepting"> Accepting Players</span><button class="joinbutton">Join Team</button><br>
     </li>
     <li>
-      <a href="#"></a>
+        <span> Goon Squad <span style="float: right"> Eric Kulchycki </span></span><br>
+        <span> Disc Golf <span style= "float: right"> Num. Players: 3 </span></span><br>
+        <span> W: -4 - L: 19328<span style= "float: right"> Winnipeg, MB, CA</span></span><br><br>
+        <span id="notaccepting"> Not Accepting Players</span>
     </li>
     <li>
-      <a href="#"></a>
+        <span> Goon Squadball <span style="float: right"> Jim Young </span></span><br>
+        <span> Dodgeball <span style= "float: right"> Num. Players: 15 </span></span><br>
+        <span> W: 13 - L: 37<span style= "float: right"> Winnipeg, MB, CA</span></span><br><br>
+        <span id="notaccepting"> Team is Full</span><br>
     </li>
-        <li>
-      <a href="#"></a>
+    <li>
+        <span> Goon Squad Allegiance Team<span style="float: right"> Nicholas Josephson </span></span><br>
+        <span> Volleyball <span style= "float: right"> Num. Players: 8 </span></span><br>
+        <span> W: 0 - L: 1<span style= "float: right"> Toronto, ON, CA</span></span><br><br>
+        <span id="accepting"> Accepting Players</span><button class="joinbutton">Join Team</button><br>
     </li>
   </ul>
   </div>
