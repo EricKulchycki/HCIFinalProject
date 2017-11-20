@@ -29,6 +29,19 @@ input[type=text] { /* style for text boxes */
     box-sizing: border-box;
 }
 
+input[type=text2] { /* style for text boxes */
+	position: relative;
+	height: 15%;
+    width: 30%;
+	margin: 1%;
+    display: inline-block;
+	font-size: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+	
+}
+
 input[type=submit] { /* style for submit box */
 	position: fixed;
 	display: inline-block;
@@ -301,7 +314,7 @@ background-color: grey;
 	border-style: none;
 	border-color: gray;
 	display: inline-block;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: right;
 	margin: 3% 0;
 }
@@ -322,6 +335,7 @@ background-color: grey;
 	position: relative;
 	height: 80%;
 	width: 20%;
+	min-width: 300px;
 	left: 40%;
 	top: 10%;
 	border-style: solid;
@@ -346,7 +360,7 @@ background-color: grey;
 
 .createsubmit {
 	position: relative;
-	display: inline-block;
+	display: block;
 	
 	height: 30px;
 	width: 25%;
@@ -367,6 +381,37 @@ background-color: grey;
 
 .createsubmit:hover {
     background-color: #333333;
+}
+
+#playersbuttonmin {
+	position: relative;
+	display: inline-block;
+	
+	font-size: 10px;
+	margin: 0 0;
+	
+	text-align: center;
+	background-color: lightgrey;
+}
+#playersbuttonmax {
+	position: relative;
+	display: inline-block;
+	
+	font-size: 10px;
+	margin: 0 0;
+	
+	text-align: center;
+	background-color: lightgrey;
+}
+#playersbuttonexact {
+	position: relative;
+	display: inline-block;
+	
+	font-size: 10px;
+	margin: 0 0;
+	
+	text-align: center;
+	background-color: lightgrey;
 }
 }
 
@@ -390,7 +435,7 @@ function changeNamesTwo() {
 }
 
 function changeInvitesOne() {
-
+	
 }
 
 function changeInvitesTwo() {
@@ -402,10 +447,26 @@ function openCreate() {
 
 }
 
-function closeCreate() {
-			var element = document.getElementById('createteampopup');
+function min() {
+			document.getElementById('playersbuttonmin').style.backgroundColor="grey";
+			document.getElementById('playersbuttonmax').style.backgroundColor="lightgrey";
+			document.getElementById('playersbuttonexact').style.backgroundColor="lightgrey";
 			
 }
+
+function max() {
+			document.getElementById('playersbuttonmin').style.backgroundColor="lightgrey";
+			document.getElementById('playersbuttonmax').style.backgroundColor="grey";
+			document.getElementById('playersbuttonexact').style.backgroundColor="lightgrey";
+			
+}
+function exact() {
+			document.getElementById('playersbuttonmin').style.backgroundColor="lightgrey";
+			document.getElementById('playersbuttonmax').style.backgroundColor="lightgrey";
+			document.getElementById('playersbuttonexact').style.backgroundColor="grey";
+			
+}
+
 </script>
 
 <div id="createteampopup">
@@ -418,20 +479,23 @@ function closeCreate() {
 					</button>
 				</p>
 				
-				<p class="rowforform">Team Name</p><input style="width: 40%" type="text" placeholder="Team name">
-				<br><br>
-				<p class="rowforform">Sport</p><input type="text" placeholder="Name of Sport">
-				<br><br>
-				<p class="rowforform">Country</p><input type="text" placeholder="Team's Country">
+				<p class="rowforform">Team Name</p><input style="width: 40%" type="text2" placeholder="Team name">
 				<br>
-				<p class="rowforform">Province</p><input type="text" placeholder="Team's Province">
+				<p class="rowforform">Sport</p><input type="text2" placeholder="Name of Sport">
+				<br><hr>
+				<p class="rowforform">Country</p><input type="text2" placeholder="Team's Country">
 				<br>
-				<p class="rowforform">City</p><input type="text" placeholder="Team's City">
+				<p class="rowforform">Province</p><input type="text2" placeholder="Team's Province">
 				<br>
-				<p class="rowforform">Neighbourhood</p><input type="text" placeholder="Neighbourhood">
-				<br><br>
-				<p class="rowforform">Location</p><input type="text" placeholder="Location">
-				<br><br>
+				<p class="rowforform">City</p><input type="text2" placeholder="Team's City">
+				<br>
+				<p class="rowforform">Neighbourhood</p><input type="text2" placeholder="Neighbourhood">
+				<br><hr><br>
+				<p class="rowforform" style="font-size: 16px">Number of Players</p><input type="text2" style="width:10%" placeholder="eg. 5">
+				<button id="playersbuttonmin" onClick='min()'>Min</button>
+				<button id="playersbuttonmax" onClick='max()'>Max</button>
+				<button id="playersbuttonexact" onClick='exact()'>Exact</button>
+				<br><br><br>
 				<input class="createsubmit" type="createsubmit" value="Create Team">
 				
 			</form>
