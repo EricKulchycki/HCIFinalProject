@@ -9,9 +9,10 @@
 <div id="searchbox">
   <p style="text-align: center; font-family: arial;">Team Name :
     <input type="text" name="teamname" placeholder="Enter Team Name">  
-    <button class="searchbutton" onClick="actAnim()">Search</button><br>
+    <button class="searchbutton" onClick="actAnim()">Search</button>
   </p>
   <button class="advancedButton" onClick="expandIt()">Advanced</button>
+  <br>
   <div id="advancedOptions">
     <div class="CountryFilter" style="margin-left: 20px">
       <span id="space">Country :</span>
@@ -48,17 +49,7 @@
     <div class="SportFilter">
       <span id="space"> Sport Type :</span>
       <span id="space">
-        <select name="sports">
-          <option value="Canada">Badminton</option>
-          <option value="Canada">Basketball</option>
-          <option value="Canada">Disc Golf</option>
-          <option value="Canada">Dodgeball</option>
-          <option value="Canada">Golf</option>
-          <option value="Canada">Hockey</option>
-          <option value="Canada">Soccer</option>
-          <option value="Canada">Volleyball</option>
-          <option value="Canada">Water Polo</option>
-        </select>
+        <input type="text" name="sportname" placeholder="Enter Sport">  
       </span>
     </div>
     <div class="NumPlayerFilter">
@@ -114,7 +105,7 @@
         <span> Goon Squad Allegiance Team<span style="float: right"> Nicholas Josephson </span></span><br>
         <span> Volleyball <span style= "float: right"> Num. Players: 8 </span></span><br>
         <span> W: 0 - L: 1<span style= "float: right"> Toronto, ON, CA</span></span><br><br>
-        <span id="notaccepting"> Not Accepting Players</span><div id="onteambutton">Cannot Join</div><br>
+        <span id="notaccepting"> Team is Full </span><div id="onteambutton">Cannot Join</div><br>
     </li>
   </ul>
   </div>
