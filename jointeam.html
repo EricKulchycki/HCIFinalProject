@@ -8,10 +8,11 @@
 
 <div id="searchbox">
   <p style="text-align: center; font-family: arial;">Team Name :
-  <input type="text" name="teamname" placeholder="Enter Team Name">  
-  <button class="searchbutton">Search</button><br>
-  <div class="advancedOption">
-    <input id="toggle" type="checkbox" checked> Advanced </input><br>
+    <input type="text" name="teamname" placeholder="Enter Team Name">  
+    <button class="searchbutton" onClick="actAnim()">Search</button><br>
+  </p>
+  <button class="advancedButton" onClick="expandIt()">Advanced</button>
+  <div id="advancedOptions">
     <div class="CountryFilter" style="margin-left: 20px">
       <span id="space">Country :</span>
       <span id="space">
@@ -61,15 +62,20 @@
       </span>
     </div>
     <div class="NumPlayerFilter">
-      <span id="space"> Number of Players : </span>
+      <span id="space"> Number of Players :          Cap Type: </span>
+      <select name="countries" align="right">
+          <option value="Canada">Maximum</option>
+          <option value="Canada">Exact</option>
+          <option value="Canada">Minimum</option>
+      </select>
       <span id="space">
-       <input type="text" name="numplayers">  
+       <input type="text" name="numplayers" placeholder="Enter Number"></input>
       </span>
     </div>
     <div class="CoachFilter">
       <span id="space"> Coach's Name :</span>
       <span id="space">
-        <input type="text" name="coachname">  
+        <input type="text" name="coachname" placeholder="Enter Coach">  
       </span>
     </div>
   </div>
@@ -89,8 +95,8 @@
         <span> Goon Squad <span style="float: right"> Kevin Hoang </span></span><br>
         <span> Soccer <span style= "float: right"> Num. Players: 15 </span></span><br>
         <span> W: 1024825 - L: 1<span style= "float: right"> Winnipeg, MB, CA</span></span><br><br>
-        <span id="accepting"> Accepting Players</span><button id="cancelbutton" onClick="cancelRequest()">Cancel Request</button>
-        <button id="joinbutton" onClick="joinRequest()">Join Team</button><br>
+        <span id="accepting"> Accepting Players</span><button type="button" id="cancelbutton" onClick="cancelRequest()">Cancel Request</button>
+        <button type="button" id="joinbutton" onClick="joinRequest()">Join Team</button><br>
     </li>
     <li>
         <span> Goon Squad <span style="float: right"> Eric Kulchycki </span></span><br>
@@ -102,13 +108,13 @@
         <span> Goon Squadball <span style="float: right"> Jim Young </span></span><br>
         <span> Dodgeball <span style= "float: right"> Num. Players: 15 </span></span><br>
         <span> W: 13 - L: 37<span style= "float: right"> Winnipeg, MB, CA</span></span><br><br>
-        <span id="notaccepting"> Team is Full</span><br>
+        <span id="notaccepting"> Team is Full</span><div id="onteambutton">Cannot Join</div><br><br>
     </li>
     <li>
         <span> Goon Squad Allegiance Team<span style="float: right"> Nicholas Josephson </span></span><br>
         <span> Volleyball <span style= "float: right"> Num. Players: 8 </span></span><br>
         <span> W: 0 - L: 1<span style= "float: right"> Toronto, ON, CA</span></span><br><br>
-        <span id="accepting"> Accepting Players</span><button id="joinbutton">Join Team</button><br>
+        <span id="notaccepting"> Not Accepting Players</span><div id="onteambutton">Cannot Join</div><br>
     </li>
   </ul>
   </div>
@@ -116,7 +122,39 @@
 
 <script>
 function joinRequest() {
-    document.getElementByID("cancelbutton").style.color = "black";
+    var y = document.getElementById("cancelbutton");
+    var x = document.getElementById("joinbutton");
+    x.style.display = "none"
+    y.style.display = "block";
+}
+
+function cancelRequest()
+{
+    var y = document.getElementById("cancelbutton");
+    var x = document.getElementById("joinbutton");
+    x.style.display = "block"
+    y.style.display = "none";
+}
+
+function actAnim()
+{
+    document.getElementById("searchbox").className = "searchBoxAnim";
+    document.getElementById("resultbox").className = "resultBoxAnim";
+}
+
+function expandIt()
+{
+    var x = document.getElementById("advancedOptions");
+    
+    if (x.style.display == "block")
+    {
+      x.style.display = "none";
+    } 
+    else
+    {
+      x.style.display = "block";
+    }
+
 }
 </script>
 

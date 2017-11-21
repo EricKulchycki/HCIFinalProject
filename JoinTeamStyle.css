@@ -1,8 +1,10 @@
+
+
 /* SEARCH BOX STUFF */
 /* Search Button */
 .searchbutton {
-  height: 25px;
-  width: 75px;
+  height: 30%;
+  width: 20%;
   
   background-color: #666666;
   border: none;
@@ -30,10 +32,16 @@
 }
 
 
+.searchBoxAnim
+{
+  animation-name: searchAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
 #searchbox
 {
-  width: 30%;
-  height: 15%;
+  width: 400px;
+  height: 100px;
   background-color:#888888;
   color: #ffffff;
   
@@ -54,14 +62,19 @@
   float:left;
   
   z-index: 99;
-  
-  animation-name: searchAnimation;
-  animation-duration: 30s;
+ 
 }
 
 /* END OF SEARCHBOX */
 
 /* RESULT SCREEN */
+
+.resultBoxAnim
+{
+  animation-name: resultAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 #resultbox
 {
   width: 10px;
@@ -83,9 +96,6 @@
   border-radius: 5px;
   box-shadow: 0px 0px 0px 3px #666666;
   float:left;
-  
-  animation-name: resultAnimation;
-  animation-duration: 30s;
   
   z-index: 1;
   
@@ -177,7 +187,7 @@
   text-align: center;
   text-decoration: none;
   
-  display: block;
+  display: none;
   font-size: 15px;
   margin: 2px 2px;
   cursor: pointer;
@@ -245,12 +255,27 @@ input[type=text] {
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 13px;
     background-color: white;
     background-image: url('searchicon.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 0px 10px 0px 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+/* list */
+select {
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 0px 5px 0px 5px;
     transition: width 0.4s ease-in-out;
 }
 
@@ -286,7 +311,7 @@ ul li
 /* DROPDOWN */
 
 
-.advancedOption {
+.advancedButton {
   width: 50%;
   height: 20px;
   background-color: #888888;
@@ -309,11 +334,12 @@ ul li
   
   transition: 0.5s;
 }
-.advancedOption:hover {
-  color: #cccccc;
+.advancedButton:hover {
+  background: #aaaaaa;
 }
 
-.advancedOption::before {
+
+.advancedButton::before {
   font-family: Consolas, monaco, monospace;
   font-weight: bold;
   font-size: 15px;
@@ -324,13 +350,13 @@ ul li
   height: 20px;
   margin-right: 1px;
   background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+} 
+
+.advancedButton:active {
+  background: #666666;
 }
 
-.advancedOption:focus
-{
-  display: block;
-}
-.advancedOption:active
+#advancedOptions
 {
   width: 100%;
   height: 300px;
@@ -347,6 +373,21 @@ ul li
   box-shadow: 0px 0px 0px 2px #666666;
   
   z-index: 1;
+  display: none;
+}
+
+.advanceExpandAnim
+{
+  animation-name: advanceExpand;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.advanceCollapseAnim
+{
+  animation-name: advanceCollapse;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 div div div
@@ -355,7 +396,7 @@ div div div
   height: 17%;
   
   position: relative;
-  display: none;
+  display: inline-block;
   
   overflow: hidden;
 
@@ -377,6 +418,35 @@ div div div:last-child
 div div:active div
 {
   display: inline-block;
+}
+
+.capbutton {
+  height: 20px;
+  width: 50px;
+  
+  background-color: #666666;
+  border: none;
+  color: white;
+  
+  padding: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+  
+  display: inline-block;
+  font-size: 15px;
+  margin: 2px 2px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 2px #444444;
+}
+
+.capbutton:hover{
+    background-color: #777777;
+}
+
+.capbutton:focus
+{
+
+  background: #444444;
 }
 
 .CountryFilter
@@ -425,30 +495,25 @@ div div:active div
   display: block;
 }
 
-
-.soccer
-{
-   background: url('soccer.png') no-repeat;
-   width: 16px;
-   height: 16px;
-   border: none;
-
-   display:inline-block;
-}
-
 @keyframes searchAnimation
 {
-  10% {}
-  12% {left:0;}
-  14% {left: -500px;}
   100% {left: -500px;}
+}
+
+@keyframes advanceExpand
+{
+  100% {height: 500px;}
+}
+
+@keyframes advanceCollapse
+{
+  100% {width: 500px;}
 }
 
 @keyframes resultAnimation
 {
   0% {left: 0; width: 10px; height: 10px;}
-  12% {left: 0;}
-  14% {left: 500px; width: 10px; height: 10px;}
-  15% {width: 500px; height: 500px;}
+  30% {left: 500px; width: 10px; height: 10px;}
+  50% {width: 500px; height: 500px;}
   100% {left: 500px; width: 500px; height: 500px}
 }
