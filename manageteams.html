@@ -39,6 +39,17 @@ input[type=text2] { /* style for text boxes */
     border: 1px solid black;
     border-radius: 4px;
     box-sizing: border-box;
+}
+#text2 { /* style for text boxes */
+	position: relative;
+	height: 15%;
+    width: 30%;
+	margin: 1% 1% 1% 0;
+    display: inline-block;
+	font-size: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
 	
 }
 
@@ -364,7 +375,6 @@ background-color: grey;
 	position: relative;
 	display: block;
 	
-	height: 30px;
 	width: 25%;
 	margin: 0 40%;
 	
@@ -582,9 +592,14 @@ function changeInvitesTwo() {
 
 }
 
-function openCreate() {
-
-
+function resetCreateForm() {
+	
+	document.getElementById('createteampopup').style.display= 'none';
+	document.getElementById('formone').reset();
+	
+	document.getElementById('playersbuttonmin').style.backgroundColor="lightgrey";
+	document.getElementById('playersbuttonmax').style.backgroundColor="lightgrey";
+	document.getElementById('playersbuttonexact').style.backgroundColor="lightgrey";
 }
 
 function min() {
@@ -611,7 +626,7 @@ function exact() {
 
 <div id="createteampopup">
 	<div class="createteamform">
-				<form action="#nothing"> 
+				<form id='formone' action="#nothing"> 
 					<p class="rowforform" style="margin: 0 0 10% 0 ;text-align: center; width: 100%; border-bottom:solid; border-bottom-color: black">
 					<b>Create A Team</b> 
 					<button id="close" type="button" onClick="document.getElementById('createteampopup').style.display='none'">
@@ -625,9 +640,44 @@ function exact() {
 				<br><hr>
 				<p class="rowforform">Country</p><input type="text2" placeholder="Team's Country">
 				<br>
-				<p class="rowforform">Province</p><input type="text2" placeholder="Team's Province">
+				<p class="rowforform">Province</p>
+					<select id="text2">
+							<option></option>
+							<option>Alberta</option>
+							<option>B.C.</option>
+							<option>Manitoba</option>
+							<option>N.L.</option>
+							<option>N.W.T.</option>
+							<option>Nova Scotia</option>
+							<option>New Brunswick</option>
+							<option>Nunavut</option>
+							<option>Ontario</option>
+							<option>P.E.I.</option>
+							<option>Quebec</option>
+							<option>Saskachewan</option>
+							<option>Yukon</option>
+					</select>
 				<br>
-				<p class="rowforform">City</p><input type="text2" placeholder="Team's City">
+				<p class="rowforform">City</p>
+				        <select id="text2">
+							<option></option>
+							<option>Charlottetown</option>
+							<option>Calgary</option>
+							<option>Edmonton</option>
+							<option>Fredericton</option>
+							<option>Halifax</option>
+							<option>Iqaluit</option>
+							<option>Ottawa</option>
+							<option>Quebec</option>
+							<option>Regina</option>
+							<option>St. John's</option>
+							<option>Toronto</option>
+							<option>Vancouver</option>
+							<option>Victoria</option>
+							<option>Whitehorse</option>
+							<option>Winnipeg</option>
+							<option>Yellowknife</option>
+        </select>
 				<br>
 				<p class="rowforform">Neighbourhood</p><input type="text2" placeholder="Neighbourhood">
 				<br><hr><br>
@@ -636,7 +686,7 @@ function exact() {
 				<button id="playersbuttonmax" onClick='max()'>Max</button>
 				<button id="playersbuttonexact" onClick='exact()'>Exact</button>
 				<br><br><br>
-				<input class="createsubmit" type="createsubmit" value="Create Team">
+				<button class="createsubmit" onClick='resetCreateForm()'>Create Team</button>
 				
 			</form>
 	</div>
