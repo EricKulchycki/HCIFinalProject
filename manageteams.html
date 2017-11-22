@@ -250,13 +250,15 @@ background-color: grey;
 	top: 0;
 	width: 26%;
 	height: 100%;
-	margin: 0 0 0 15px;
+	margin: 0 0 0 5%;
 	border-style: solid;
 	border-color: black;
 	border-radius: 5px;
     box-sizing: border-box;
 	display: inline-block;
 	text-align: center;
+	
+	background-color: rgb(150,150,150);
 
 }
 
@@ -413,7 +415,137 @@ background-color: grey;
 	text-align: center;
 	background-color: lightgrey;
 }
+#topinvitesone {
+	position: relative;
+	display: block;
+	
+	width: 100%;
+	height: 49%;
+	
+	border-style: none;
+	border-color: green;
+	overflow: auto;
 }
+
+#bottominvitesone {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 49%;
+	
+	border-style: none;
+	border-color: blue;
+	overflow: auto;
+}
+
+#topinvitestwo {
+	position: relative;
+	display: none;
+	
+	width: 100%;
+	height: 49%;
+	
+	border-style: none;
+	border-color: green;
+	overflow: auto;
+}
+
+#bottominvitestwo {
+	position: relative;
+	display: none;
+	width: 100%;
+	height: 49%;
+	
+	border-style: none;
+	border-color: blue;
+	overflow: auto;
+}
+.titleforinviteboxs{
+	position: sticky;
+	display: block;
+	
+	top: 0;
+	width: 100%;
+	
+	border-bottom: solid;
+	border-color: black;
+	
+	background-color: rgb(150,150,150);
+	text-align: center;
+	z-index: 1;
+
+}
+.rowforinviteboxs{
+	position: relative;
+	display: block;
+	
+	width: 99%;
+	
+	margin: 3% 0 0 0;
+	
+	border-bottom: solid;
+	border-color: rgb(200,200,200);
+	border-width: thin;
+	text-align: center;
+	z-index: 0;
+}
+
+#confirmbutton {
+	position: relative;
+	display: inline-block;
+	float: right;
+	font-size: 10px;
+	margin: 0 0;
+	
+	border-radius: 5px;
+	border-width: thin;
+	border-style: solid;
+	border-color: black;
+	text-align: center;
+	background-color: green;
+}
+#confirmbutton:hover {
+	background-color: darkgreen;
+}
+
+#declinebutton {
+	position: relative;
+	display: inline-block;
+	float: right;
+	font-size: 10px;
+	margin: 0 0;
+	
+	border-radius: 5px;
+	border-width: thin;
+	border-style: solid;
+	border-color: black;
+	text-align: center;
+	background-color: red;
+}
+#declinebutton:hover {
+	background-color: darkred;
+}
+#infobutton {
+	position: relative;
+	display: inline-block;
+	float: right;
+	font-size: 10px;
+	margin: 0 2px;
+	
+	border-radius: 10px;
+	border-width: thin;
+	border-style: solid;
+	border-color: black;
+	text-align: center;
+	background-color: lightgray;
+}
+#infobutton:hover {
+	background-color: darkgrey;
+}
+
+
+}
+
 
 
 </style>
@@ -427,11 +559,19 @@ background-color: grey;
 function changeNamesOne() {
    		document.getElementById('headerrightmiddle').innerHTML = "Sun Devils";
 		document.getElementById('teamonetitle').innerHTML = "Sun Devils";
+		document.getElementById('topinvitesone').style.display = "none";
+		document.getElementById('bottominvitesone').style.display = "none";
+		document.getElementById('topinvitestwo').style.display = "block";
+		document.getElementById('bottominvitestwo').style.display = "block";
 }
 
 function changeNamesTwo() {
    		document.getElementById('headerrightmiddle').innerHTML = "Goon Squad";
 		document.getElementById('teamonetitle').innerHTML = "Goon Squad";
+		document.getElementById('topinvitesone').style.display = "block";
+		document.getElementById('bottominvitesone').style.display = "block";
+		document.getElementById('topinvitestwo').style.display = "none";
+		document.getElementById('bottominvitestwo').style.display = "none";
 }
 
 function changeInvitesOne() {
@@ -562,7 +702,78 @@ function exact() {
 	</div>
 	
 	<div class="rightinside">
+		<div id="topinvitesone">
+			<div class="titleforinviteboxs">
+			<b> Game Invites</b>
+			</div>
+			
+			<p class="rowforinviteboxs" id="gameone"> The Bladers 
+			<button id="declinebutton" onclick="document.getElementById('gameone').style.display='none'; document.getElementById('gameoneinfo').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button>
+			<button id="confirmbutton" onclick="document.getElementById('gameone').style.display='none'; document.getElementById('gameoneinfo').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+			<button id="infobutton" onclick="document.getElementById('gameoneinfo').style.display='block'">Info</button> 
+			</p>
+			<p class="rowforinviteboxs" style="border-style: solid; border-width: thin; border-color:black; font-size:11px; background-color:lightgrey; display: none; margin: 0 0 3% 0" id="gameoneinfo">
+				Date: December 29, 2017<br>
+				Time: 10:00PM<br>
+				Location: 114 Northside dr
+			</p>
+			
+			<p class="rowforinviteboxs" id="gametwo"> Golphers 
+			<button id="declinebutton" onclick="document.getElementById('gametwo').style.display='none'; document.getElementById('gametwoinfo').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+			<button id="confirmbutton" onclick="document.getElementById('gametwo').style.display='none'; document.getElementById('gametwoinfo').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+			<button id="infobutton" onclick="document.getElementById('gametwoinfo').style.display='block'">Info</button> 
+			</p>
+			<p class="rowforinviteboxs" style="border-style: solid; border-width: thin; border-color:black; font-size:11px; background-color:lightgrey; display: none; margin: 0 0 3% 0" id="gametwoinfo">
+				Date: November 12, 2017<br>
+				Time: 8:00PM<br>
+				Location: Southend Arena
+			</p>
+			
+		</div>
 		
+		<div id="bottominvitesone">
+			<div class="titleforinviteboxs" style="border-top-style: solid">
+			<b> Player Requests </b>
+			</div>
+				<p class="rowforinviteboxs" id="one"> Alex Apple  <button id="declinebutton" onclick="document.getElementById('one').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('one').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+				<p class="rowforinviteboxs" id="two"> John Smith <button id="declinebutton" onclick="document.getElementById('two').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('two').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+				<p class="rowforinviteboxs" id="three"> Barry Blonde <button id="declinebutton" onclick="document.getElementById('three').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('three').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+				<p class="rowforinviteboxs" id="four"> Douglas Less <button id="declinebutton" onclick="document.getElementById('four').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('four').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+				<p class="rowforinviteboxs" id="five"> Steph Ohe <button id="declinebutton" onclick="document.getElementById('five').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('five').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+				<p class="rowforinviteboxs" id="six"> James Frank <button id="declinebutton" onclick="document.getElementById('six').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('six').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+				<p class="rowforinviteboxs" id="seven"> Jessica Solvulchuk <button id="declinebutton" onclick="document.getElementById('seven').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('seven').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+				<p class="rowforinviteboxs" id="eight"> Brittney Lul <button id="declinebutton" onclick="document.getElementById('eight').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('eight').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+		</div>
+		
+		
+		
+		<div id="topinvitestwo">
+			<div class="titleforinviteboxs">
+			<b> Game Invites</b>
+			</div>
+			
+			<p class="rowforinviteboxs" id="gameoneb"> Blue Scorpions
+			<button id="declinebutton" onclick="document.getElementById('gameoneb').style.display='none'; document.getElementById('gameoneinfob').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button>
+			<button id="confirmbutton" onclick="document.getElementById('gameoneb').style.display='none'; document.getElementById('gameoneinfob').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+			<button id="infobutton" onclick="document.getElementById('gameoneinfob').style.display='block'">Info</button> 
+			</p>
+			<p class="rowforinviteboxs" style="border-style: solid; border-width: thin; border-color:black; font-size:11px; background-color:lightgrey; display: none; margin: 0 0 3% 0" id="gameoneinfob">
+				Date: May 01, 2018<br>
+				Time: 6:30PM<br>
+				Location: Maple Grove Park
+			</p>
+			
+		</div>
+		
+		<div id="bottominvitestwo">
+			<div class="titleforinviteboxs" style="border-top-style: solid">
+			<b> Player Requests </b>
+			</div>
+			<p style="font-size: 12px;"> You have no current Player Join Requests. </p>
+
+		</div>
+		
+
 	</div>
 	</div> <!-- end of scheudling box-->
 </div><!-- end of entire box -->
