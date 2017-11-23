@@ -59,12 +59,12 @@ input[type=submit] { /* style for submit box */
 	
     width: 5%;
 	min-width: 75px;
-	height: 75px;
+	height: 45px;
 	bottom: 44%;
-	left: 24%;
+	left: 41%;
 	
-    background-color: limegreen;
-    color: white;
+    background-color: cyan;
+    color: black;
 	
     padding: 14px 20px;
     margin: 8px 25px;
@@ -76,9 +76,7 @@ input[type=submit] { /* style for submit box */
     cursor: pointer;
 	
 	text-align: center;
-
 }
-
 
 input[type=submit]:hover {
     background-color: #333333;
@@ -87,18 +85,9 @@ input[type=text]:hover {
     background-color: lightgray;
 }
 
-.formsection {
-	font-size: 12px;
-	position: relative;
-	height: 60%;
-	width: 100%;
-	left: 0;
-	top: 20%;
 
 
-}
-
-.teamsrunside {
+.primarycontainer {
 	position: relative;
 	display: inline-block;
 	height:95%;
@@ -111,20 +100,50 @@ input[type=text]:hover {
 	min-height: 250px;
 }
 
-.teamsrunsideheader {
-	text-align: left;
-	font-weight: bold;
-	font-size: 20px;
-	padding-left: 25px;
-	width: 30%;
+#teamtitle{
+	position: relative;
+	top: 0;
+	width: 90%;
 	height: 10%;
+	border-style: none;
+	border-color: black;
+	display: block;
+	text-align: center;
+	font-size: 25px;
+	margin: auto;
 }
 
+.innercontainer {
+	position: relative;
+	top: 0;
+	width: 90%;
+	height: 75%;
+	border-style: none;
+	border-color: black;
+	display: block;
+	margin: auto;
+
+}
+
+.row {
+	position: relative;
+	width: 25%;
+	height: 15%;
+	border-style: none;
+	border-color: black;
+	display: inline-block;
+	text-align: right;
+	margin: 0 0;
+}
+
+
+
+/* --------------------------- Code for header */
 
 .headerformanage {
 	position: relative;
 	display: inline-block;
-	height: 10%;
+	height: 9%;
 	width: 100%;
 	border-top: none;
 	border-right: none;
@@ -161,7 +180,7 @@ input[type=text]:hover {
 
 }
 
-.createateam {
+.createateambutton {
 	position: absolute;
 	display: inline-block;
 	height: 60%;
@@ -207,7 +226,7 @@ background-color: grey;
 	top: 0px;
 }
 
-#headerrightmiddle {
+#header_teamname {
 	position: relative;
 	display: inline-block;
 	height: 100%;
@@ -218,67 +237,17 @@ background-color: grey;
 
 }
 
+/* ---------------------------------- end of header code */
 
 
-#teamonetitle{
-	position: relative;
-	top: 0;
-	width: 90%;
-	height: 10%;
-	border-style: none;
-	border-color: black;
-	display: block;
-	text-align: center;
-	font-size: 25px;
-	margin: auto;
-}
 
-.scheduling {
-	position: relative;
-	top: 0;
-	width: 90%;
-	height: 75%;
-	border-style: none;
-	border-color: black;
-	display: block;
-	margin: auto;
-
-}
-
-.leftinside {
+/* -------------------------------- Code for scheduling containers */
+.schedulingcontainer {
 	position: relative;
 	top: 0;
 	width: 70%;
 	height: 100%;
 	border-style: none;
-	border-color: black;
-	display: inline-block;
-	text-align: center;
-}
-
-.rightinside {
-	position: absolute;
-	top: 0;
-	width: 26%;
-	height: 100%;
-	margin: 0 0 0 5%;
-	border-style: solid;
-	border-color: black;
-	border-radius: 5px;
-    box-sizing: border-box;
-	display: inline-block;
-	text-align: center;
-	
-	background-color: rgb(150,150,150);
-
-}
-
-.titleright {
-	position: relative;
-	top: 0;
-	width: 100%;
-	height: 10%;
-	border-style: solid;
 	border-color: black;
 	display: inline-block;
 	text-align: center;
@@ -309,122 +278,28 @@ background-color: grey;
 	text-align: center;
 }
 
-.row {
-	position: relative;
-	width: 25%;
-	height: 15%;
-	border-style: none;
-	border-color: black;
-	display: inline-block;
-	text-align: right;
-	margin: 0 0;
-}
+/* ----------------------------- End of scheudling code */
 
-.rowforform {
-	position: relative;
-	width: 45%;
-	height: 15%;
-	border-style: none;
-	border-color: gray;
-	display: inline-block;
-	font-size: 18px;
-	text-align: right;
-	margin: 3% 0;
-}
 
-#createteampopup {
-	position: fixed;
-	height: 99%;
-	width: 100%;
-	border-style: none;
-	border-color: cyan;
-	z-index: 10;
-	background: rgba(10,10,10, .9);
-	display: none;
 
-}
-
-.createteamform {
-	position: relative;
-	height: 80%;
-	width: 20%;
-	min-width: 300px;
-	left: 40%;
-	top: 10%;
+/* ----------------------------  Code for invites container */
+.invitescontainer {
+	position: absolute;
+	top: 0;
+	width: 26%;
+	height: 100%;
+	margin: 0 0 0 5%;
 	border-style: solid;
-	border-color: black;
-	z-index: 11;
-	background: lightgrey;
-
-}
-#close {
-    float:right;
-    display:inline-block;
-    padding:2px 5px;
-    background:rgb(181, 1, 13);
-}
-#close:hover {
-    float:right;
-    display:inline-block;
-    padding:2px 5px;
-    background:#ccc;
-    color:#fff;
-}
-
-.createsubmit {
-	position: relative;
-	display: block;
-	
-	width: 25%;
-	margin: 0 40%;
-	
-	border-style: solid;
-	border-width: 1px;
 	border-color: black;
 	border-radius: 5px;
-	
-	color: black;
-	background-color: rgb(12, 245, 249);
-	font-weight: bold;
+    box-sizing: border-box;
+	display: inline-block;
 	text-align: center;
-	overflow: hidden;
-	cursor: pointer;
+	
+	background-color: rgb(150,150,150);
+
 }
 
-.createsubmit:hover {
-    background-color: #333333;
-}
-
-#playersbuttonmin {
-	position: relative;
-	display: inline-block;
-	
-	font-size: 10px;
-	margin: 0 0;
-	
-	text-align: center;
-	background-color: lightgrey;
-}
-#playersbuttonmax {
-	position: relative;
-	display: inline-block;
-	
-	font-size: 10px;
-	margin: 0 0;
-	
-	text-align: center;
-	background-color: lightgrey;
-}
-#playersbuttonexact {
-	position: relative;
-	display: inline-block;
-	
-	font-size: 10px;
-	margin: 0 0;
-	
-	text-align: center;
-	background-color: lightgrey;
-}
 #topinvitesone {
 	position: relative;
 	display: block;
@@ -552,9 +427,242 @@ background-color: grey;
 #infobutton:hover {
 	background-color: darkgrey;
 }
+#acceptedconfirmation {
+	position: relative;
+	display: block;
+	
+	visibility: hidden;
+	height: 0px;
+	
+	width: 0%;
+	
+	transition: display 4s, visibility 0s, height 0s, width 2s;
+	
+	margin: 0 0 0 0;
+	
+	border-top: solid;
+	border-bottom: solid;
+	border-color: black;
+	background-color: green;
+	text-align: center;
+	z-index: 0;
+}
+#declinedconfirmation {
+	position: relative;
+	display: block;
+	
+	visibility: hidden;
+	height: 0px;
+	
+	width: 0%;
+	
+	transition: display 4s, visibility 0s, height 0s, width 2s;
+	
+	margin: 0 0 0 0;
+	
+	border-top: solid;
+	border-bottom: solid;
+	border-color: black;
+	background-color: red;
+	text-align: center;
+	z-index: 0;
+}
+#acceptedconfirmationtwo {
+	position: relative;
+	display: block;
+	
+	visibility: hidden;
+	height: 0px;
+	
+	width: 0%;
+	
+	transition: display 4s, visibility 0s, height 0s, width 2s;
+	
+	margin: 0 0 0 0;
+	
+	border-top: solid;
+	border-bottom: solid;
+	border-color: black;
+	background-color: green;
+	text-align: center;
+	z-index: 0;
+}
+#declinedconfirmationtwo {
+	position: relative;
+	display: block;
+	
+	visibility: hidden;
+	height: 0px;
+	
+	width: 0%;
+	
+	transition: display 4s, visibility 0s, height 0s, width 2s;
+	
+	margin: 0 0 0 0;
+	
+	border-top: solid;
+	border-bottom: solid;
+	border-color: black;
+	background-color: red;
+	text-align: center;
+	z-index: 0;
+}
+#acceptedconfirmationb {
+	position: relative;
+	display: block;
+	
+	visibility: hidden;
+	height: 0px;
+	
+	width: 0%;
+	
+	transition: display 4s, visibility 0s, height 0s, width 2s;
+	
+	margin: 0 0 0 0;
+	
+	border-top: solid;
+	border-bottom: solid;
+	border-color: black;
+	background-color: green;
+	text-align: center;
+	z-index: 0;
+}
+#declinedconfirmationb {
+	position: relative;
+	display: block;
+	
+	visibility: hidden;
+	height: 0px;
+	
+	width: 0%;
+	
+	transition: display 4s, visibility 0s, height 0s, width 2s;
+	
+	margin: 0 0 0 0;
+	
+	border-top: solid;
+	border-bottom: solid;
+	border-color: black;
+	background-color: red;
+	text-align: center;
+	z-index: 0;
+}
+/* -------------------- End of code for invites */
 
+
+/* ---------------------Code for create a team */
+#createteampopup {
+	position: fixed;
+	height: 99%;
+	width: 100%;
+	border-style: none;
+	border-color: cyan;
+	z-index: 10;
+	background: rgba(10,10,10, .9);
+	display: none;
 
 }
+
+.createteamform {
+	position: relative;
+	height: 80%;
+	width: 20%;
+	min-width: 300px;
+	left: 40%;
+	top: 10%;
+	border-style: solid;
+	border-color: black;
+	z-index: 11;
+	background: lightgrey;
+
+}
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:rgb(181, 1, 13);
+}
+#close:hover {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    color:#fff;
+}
+
+.createsubmit {
+	position: relative;
+	display: block;
+	
+	width: 25%;
+	margin: 0 40%;
+	
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 5px;
+	
+	color: black;
+	background-color: rgb(12, 245, 249);
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.createsubmit:hover {
+    background-color: #333333;
+}
+
+#playersbuttonmin {
+	position: relative;
+	display: inline-block;
+	
+	font-size: 10px;
+	margin: 0 0;
+	
+	text-align: center;
+	background-color: lightgrey;
+}
+#playersbuttonmax {
+	position: relative;
+	display: inline-block;
+	
+	font-size: 10px;
+	margin: 0 0;
+	
+	text-align: center;
+	background-color: lightgrey;
+}
+#playersbuttonexact {
+	position: relative;
+	display: inline-block;
+	
+	font-size: 10px;
+	margin: 0 0;
+	
+	text-align: center;
+	background-color: lightgrey;
+}
+
+.rowforform {
+	position: relative;
+	width: 45%;
+	height: 15%;
+	border-style: none;
+	border-color: gray;
+	display: inline-block;
+	font-size: 18px;
+	text-align: right;
+	margin: 3% 0;
+}
+
+
+
+
+/* -------------------------End of code for create team */
+
+} /* End of style */
 
 
 
@@ -567,8 +675,8 @@ background-color: grey;
 
 <script>
 function changeNamesOne() {
-   		document.getElementById('headerrightmiddle').innerHTML = "Sun Devils";
-		document.getElementById('teamonetitle').innerHTML = "Sun Devils";
+   		document.getElementById('header_teamname').innerHTML = "Sun Devils";
+		document.getElementById('teamtitle').innerHTML = "Sun Devils";
 		document.getElementById('topinvitesone').style.display = "none";
 		document.getElementById('bottominvitesone').style.display = "none";
 		document.getElementById('topinvitestwo').style.display = "block";
@@ -576,20 +684,12 @@ function changeNamesOne() {
 }
 
 function changeNamesTwo() {
-   		document.getElementById('headerrightmiddle').innerHTML = "Goon Squad";
-		document.getElementById('teamonetitle').innerHTML = "Goon Squad";
+   		document.getElementById('header_teamname').innerHTML = "Goon Squad";
+		document.getElementById('teamtitle').innerHTML = "Goon Squad";
 		document.getElementById('topinvitesone').style.display = "block";
 		document.getElementById('bottominvitesone').style.display = "block";
 		document.getElementById('topinvitestwo').style.display = "none";
 		document.getElementById('bottominvitestwo').style.display = "none";
-}
-
-function changeInvitesOne() {
-	
-}
-
-function changeInvitesTwo() {
-
 }
 
 function resetCreateForm() {
@@ -622,6 +722,29 @@ function exact() {
 			
 }
 
+function confirm(one, two, three){
+			
+			document.getElementById(one).style.display='none'; 
+			document.getElementById(two).style.display='none';
+			
+			document.getElementById(three).style.visibility="visible";
+			document.getElementById(three).style.height="auto";
+			document.getElementById(three).style.width="99%";
+}
+
+function toggleInfo(element)
+{
+	var x = document.getElementById(element);
+	if(x.style.display=="none")
+	{
+		x.style.display='block';
+	}
+	else
+	{
+		x.style.display='none';
+	}
+
+}
 </script>
 
 <div id="createteampopup">
@@ -629,7 +752,7 @@ function exact() {
 				<form id='formone' action="#nothing"> 
 					<p class="rowforform" style="margin: 0 0 10% 0 ;text-align: center; width: 100%; border-bottom:solid; border-bottom-color: black">
 					<b>Create A Team</b> 
-					<button id="close" type="button" onClick="document.getElementById('createteampopup').style.display='none'">
+					<button id="close" type="button" onClick="resetCreateForm()">
 						<i class="fa fa-close" style="font-size:16px;color:white"></i>
 					</button>
 				</p>
@@ -692,7 +815,7 @@ function exact() {
 	</div>
 </div>
 
-<div class="teamsrunside">
+<div class="primarycontainer">
 	<div class="headerformanage">
 		<div class="headerformanage_left">
 		<p>Current Team</p>
@@ -701,24 +824,24 @@ function exact() {
 			<button class="headerbuttons" type="button" onclick='changeNamesTwo()'>
 			<b>Prev</b>
 			</button>
-			<div id="headerrightmiddle">
+			<div id="header_teamname">
 			<p>Goon Squad</p>
 			</div>
 			<button class="headerbuttons" type="button" onclick='changeNamesOne()'>
 			<b>Next</b>
 			</button>
 		</div> <!-- end of header right -->
-		<button class="createateam" type="button" onclick="document.getElementById('createteampopup').style.display='block'">
+		<button class="createateambutton" type="button" onclick="document.getElementById('createteampopup').style.display='block'">
 		<b>Create a Team</b>
 		</button>
 	</div>	<!-- end of header -->
 	
-	<div id="teamonetitle">
+	<div id="teamtitle">
 		Goon Squad
 	</div> <!-- end of team on title -->
 	
-	<div class="scheduling">
-	<div class="leftinside">
+	<div class="innercontainer">
+	<div class="schedulingcontainer">
 		<div class ="game">
 		
 			<form action="#nothing"> <!-- GO TO MY PLAYER PAGE -->
@@ -731,7 +854,7 @@ function exact() {
 				<br>
 				<p class="row">Location</p><input type="text" placeholder="Location">
 				
-				<input type="submit" value="Enter">
+				<input type="submit" value="Schedule">
 			</form>
 		</div>
 		
@@ -746,22 +869,24 @@ function exact() {
 				<br>
 				<p class="row">Location</p><input type="text" placeholder="Location">
 				
-				<input style="bottom: 5%" type="submit" value="Enter">
+				<input style="bottom: 5%" type="submit" value="Schedule">
 			</form>
 		</div>
 	</div>
 	
-	<div class="rightinside">
+	<div class="invitescontainer">
 		<div id="topinvitesone">
 			<div class="titleforinviteboxs">
 			<b> Game Invites</b>
 			</div>
 			
 			<p class="rowforinviteboxs" id="gameone"> The Bladers 
-			<button id="declinebutton" onclick="document.getElementById('gameone').style.display='none'; document.getElementById('gameoneinfo').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button>
-			<button id="confirmbutton" onclick="document.getElementById('gameone').style.display='none'; document.getElementById('gameoneinfo').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
-			<button id="infobutton" onclick="document.getElementById('gameoneinfo').style.display='block'">Info</button> 
+				<button id="declinebutton" onclick="confirm('gameone','gameoneinfo','declinedconfirmation')"><i class="fa fa-close" style="font-size:14px;color:white"></i></button>
+				<button id="confirmbutton" onclick="confirm('gameone','gameoneinfo','acceptedconfirmation')"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				<button id="infobutton" onclick="toggleInfo('gameoneinfo')">Info</button> 
 			</p>
+			<p id="declinedconfirmation"> Declined </p>
+			<p id="acceptedconfirmation"> Accepted </p>
 			<p class="rowforinviteboxs" style="border-style: solid; border-width: thin; border-color:black; font-size:11px; background-color:lightgrey; display: none; margin: 0 0 3% 0" id="gameoneinfo">
 				Date: December 29, 2017<br>
 				Time: 10:00PM<br>
@@ -769,10 +894,12 @@ function exact() {
 			</p>
 			
 			<p class="rowforinviteboxs" id="gametwo"> Golphers 
-			<button id="declinebutton" onclick="document.getElementById('gametwo').style.display='none'; document.getElementById('gametwoinfo').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
-			<button id="confirmbutton" onclick="document.getElementById('gametwo').style.display='none'; document.getElementById('gametwoinfo').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
-			<button id="infobutton" onclick="document.getElementById('gametwoinfo').style.display='block'">Info</button> 
+				<button id="declinebutton" onclick="confirm('gametwo','gametwoinfo','declinedconfirmationtwo')"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+				<button id="confirmbutton" onclick="confirm('gametwo','gametwoinfo','acceptedconfirmationtwo')"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				<button id="infobutton" onclick="toggleInfo('gametwoinfo')">Info</button> 
 			</p>
+			<p id="declinedconfirmationtwo"> Declined </p>
+			<p id="acceptedconfirmationtwo"> Accepted </p>
 			<p class="rowforinviteboxs" style="border-style: solid; border-width: thin; border-color:black; font-size:11px; background-color:lightgrey; display: none; margin: 0 0 3% 0" id="gametwoinfo">
 				Date: November 12, 2017<br>
 				Time: 8:00PM<br>
@@ -785,14 +912,46 @@ function exact() {
 			<div class="titleforinviteboxs" style="border-top-style: solid">
 			<b> Player Requests </b>
 			</div>
-				<p class="rowforinviteboxs" id="one"> Alex Apple  <button id="declinebutton" onclick="document.getElementById('one').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('one').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
-				<p class="rowforinviteboxs" id="two"> John Smith <button id="declinebutton" onclick="document.getElementById('two').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('two').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
-				<p class="rowforinviteboxs" id="three"> Barry Blonde <button id="declinebutton" onclick="document.getElementById('three').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('three').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
-				<p class="rowforinviteboxs" id="four"> Douglas Less <button id="declinebutton" onclick="document.getElementById('four').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('four').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
-				<p class="rowforinviteboxs" id="five"> Steph Ohe <button id="declinebutton" onclick="document.getElementById('five').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('five').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
-				<p class="rowforinviteboxs" id="six"> James Frank <button id="declinebutton" onclick="document.getElementById('six').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('six').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
-				<p class="rowforinviteboxs" id="seven"> Jessica Solvulchuk <button id="declinebutton" onclick="document.getElementById('seven').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('seven').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
-				<p class="rowforinviteboxs" id="eight"> Brittney Lul <button id="declinebutton" onclick="document.getElementById('eight').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> <button id="confirmbutton" onclick="document.getElementById('eight').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> </p>
+			
+				<p class="rowforinviteboxs" id="one"> Alex Apple  
+					<button id="declinebutton" onclick="document.getElementById('one').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+					<button id="confirmbutton" onclick="document.getElementById('one').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				</p>
+				
+				<p class="rowforinviteboxs" id="two"> John Smith 
+					<button id="declinebutton" onclick="document.getElementById('two').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+					<button id="confirmbutton" onclick="document.getElementById('two').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				</p>
+				
+				<p class="rowforinviteboxs" id="three"> Barry Blonde 
+					<button id="declinebutton" onclick="document.getElementById('three').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+					<button id="confirmbutton" onclick="document.getElementById('three').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				</p>
+				
+				<p class="rowforinviteboxs" id="four"> Douglas Less 
+					<button id="declinebutton" onclick="document.getElementById('four').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+					<button id="confirmbutton" onclick="document.getElementById('four').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				</p>
+				
+				<p class="rowforinviteboxs" id="five"> Steph Ohe 
+					<button id="declinebutton" onclick="document.getElementById('five').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button>
+					<button id="confirmbutton" onclick="document.getElementById('five').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button>
+				</p>
+				
+				<p class="rowforinviteboxs" id="six"> James Frank 
+					<button id="declinebutton" onclick="document.getElementById('six').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+					<button id="confirmbutton" onclick="document.getElementById('six').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				</p>
+				
+				<p class="rowforinviteboxs" id="seven"> Jessica Solvulchuk 
+					<button id="declinebutton" onclick="document.getElementById('seven').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+					<button id="confirmbutton" onclick="document.getElementById('seven').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				</p>
+				
+				<p class="rowforinviteboxs" id="eight"> Brittney Lul 
+					<button id="declinebutton" onclick="document.getElementById('eight').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button> 
+					<button id="confirmbutton" onclick="document.getElementById('eight').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				</p>
 		</div>
 		
 		
@@ -803,10 +962,12 @@ function exact() {
 			</div>
 			
 			<p class="rowforinviteboxs" id="gameoneb"> Blue Scorpions
-			<button id="declinebutton" onclick="document.getElementById('gameoneb').style.display='none'; document.getElementById('gameoneinfob').style.display='none'"><i class="fa fa-close" style="font-size:14px;color:white"></i></button>
-			<button id="confirmbutton" onclick="document.getElementById('gameoneb').style.display='none'; document.getElementById('gameoneinfob').style.display='none'"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
-			<button id="infobutton" onclick="document.getElementById('gameoneinfob').style.display='block'">Info</button> 
+				<button id="declinebutton" onclick="confirm('gameoneb','gameoneinfob','declinedconfirmationb')"><i class="fa fa-close" style="font-size:14px;color:white"></i></button>
+				<button id="confirmbutton" onclick="confirm('gameoneb','gameoneinfob','acceptedconfirmationb')"><i class="fa fa-check" style="font-size:14px;color:white"></i></button> 
+				<button id="infobutton" onclick="toggleInfo('gameoneinfob')">Info</button> 
 			</p>
+			<p id="declinedconfirmationb"> Declined </p>
+			<p id="acceptedconfirmationb"> Accepted </p>
 			<p class="rowforinviteboxs" style="border-style: solid; border-width: thin; border-color:black; font-size:11px; background-color:lightgrey; display: none; margin: 0 0 3% 0" id="gameoneinfob">
 				Date: May 01, 2018<br>
 				Time: 6:30PM<br>
