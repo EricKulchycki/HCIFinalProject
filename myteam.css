@@ -207,7 +207,7 @@ body {font-family: Verdana, sans-serif;}
 	left: 50%;
     width: 25%;
 	height: 90%;
-    overflow: scroll;
+    overflow: auto;
     display: inline-block;
     text-align: center;
     border-style: solid;
